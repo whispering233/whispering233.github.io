@@ -23,15 +23,15 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":{"active":"valine"},"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="欢迎来到我的博客！ 欢迎在这里留言！任何问题都可以在这里留言，我会及时回复的，添加email可以获得更快的回复速度，在nickname栏目输入QQ号可以直接获取你的QQ头像。">
+<meta name="description" content="欢迎来到我的博客！ 欢迎在这里留言！任何问题都可以在这里留言,在nickname栏目输入QQ号可以直接获取你的QQ头像。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="留言板">
 <meta property="og:url" content="http://example.com/guestbook/index.html">
 <meta property="og:site_name" content="Whispering&#39;s world">
-<meta property="og:description" content="欢迎来到我的博客！ 欢迎在这里留言！任何问题都可以在这里留言，我会及时回复的，添加email可以获得更快的回复速度，在nickname栏目输入QQ号可以直接获取你的QQ头像。">
+<meta property="og:description" content="欢迎来到我的博客！ 欢迎在这里留言！任何问题都可以在这里留言,在nickname栏目输入QQ号可以直接获取你的QQ头像。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-13T05:34:29.000Z">
-<meta property="article:modified_time" content="2020-11-20T12:52:14.514Z">
+<meta property="article:modified_time" content="2020-11-21T14:17:16.546Z">
 <meta property="article:author" content="Whispering">
 <meta name="twitter:card" content="summary">
 
@@ -146,11 +146,6 @@
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
         <li class="menu-item menu-item-guestbook">
 
     <a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a>
@@ -226,8 +221,7 @@
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+          <a href="/archives">
           <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
@@ -297,7 +291,7 @@
       
       <div class="post-body">
           <h1 id="欢迎来到我的博客！"><a href="#欢迎来到我的博客！" class="headerlink" title="欢迎来到我的博客！"></a>欢迎来到我的博客！</h1><blockquote>
-<p>欢迎在这里留言！任何问题都可以在这里留言，我会及时回复的，添加email可以获得更快的回复速度，在nickname栏目输入QQ号可以直接获取你的QQ头像。</p>
+<p>欢迎在这里留言！任何问题都可以在这里留言,在nickname栏目输入QQ号可以直接获取你的QQ头像。</p>
 </blockquote>
 
       </div>
@@ -425,7 +419,7 @@ if (document.querySelectorAll('.mermaid').length) {
 <script>
 NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
-    new Valine(Object.assign({"enable":true,"appId":"6m7dtd8dHwGIO0bNxeAoQCA2-MdYXbMMI","appKey":"y8zdSJiWAx5YSoG7tbTsTsb1","serverURLs":null,"placeholder":"输入你的评论\n昵称为必填项目，输入QQ号可以直接获取用户名和头像，并且省去了填写邮箱的麻烦！\n虽然email不是必选，但是填写了email可以收到推送通知哦！","avatar":"mp","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":true,"enableQQ":true,"requiredFields":["nick"]}, {
+    new Valine(Object.assign({"enable":true,"appId":"6m7dtd8dHwGIO0bNxeAoQCA2-MdYXbMMI","appKey":"y8zdSJiWAx5YSoG7tbTsTsb1","serverURLs":null,"placeholder":"输入你的评论\n昵称为必填项目，输入QQ号可以直接获取用户名和头像","avatar":"mp","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":true,"enableQQ":true,"requiredFields":["nick"]}, {
       el: '#valine-comments',
       path: "/guestbook/",
       serverURLs: "https://6m7dtd8d.api.lncldglobal.com"
