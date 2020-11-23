@@ -3,11 +3,11 @@
   <title>Whispering&#39;s world</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://whispering.xyz/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="http://whispering.xyz/"/>
   <updated>2020-11-21T14:13:46.891Z</updated>
-  <id>http://example.com/</id>
+  <id>http://whispering.xyz/</id>
   
   <author>
     <name>Whispering</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hexo入门及使用</title>
-    <link href="http://example.com/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
-    <id>http://example.com/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
+    <link href="http://whispering.xyz/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
+    <id>http://whispering.xyz/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
     <published>2020-11-21T14:09:52.000Z</published>
     <updated>2020-11-21T14:13:46.891Z</updated>
     
@@ -34,7 +34,7 @@
     
     
     
-    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
+    <category term="Hexo" scheme="http://whispering.xyz/tags/Hexo/"/>
     
   </entry>
   
