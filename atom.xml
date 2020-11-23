@@ -6,7 +6,7 @@
   <link href="http://whispering.xyz/atom.xml" rel="self"/>
   
   <link href="http://whispering.xyz/"/>
-  <updated>2020-11-23T07:17:03.425Z</updated>
+  <updated>2020-11-23T08:09:05.363Z</updated>
   <id>http://whispering.xyz/</id>
   
   <author>
@@ -17,21 +17,23 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo入门及使用</title>
+    <title>论锤子的世界</title>
     <link href="http://whispering.xyz/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
     <id>http://whispering.xyz/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
     <published>2020-11-21T14:09:52.000Z</published>
-    <updated>2020-11-23T07:17:03.425Z</updated>
+    <updated>2020-11-23T08:09:05.363Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Hexo介绍"><a href="#Hexo介绍" class="headerlink" title="Hexo介绍"></a>Hexo介绍</h1><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="前置材料"><a href="#前置材料" class="headerlink" title="前置材料"></a>前置材料</h2><h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><hr><a id="more"></a><h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1><h2 id="主题设置"><a href="#主题设置" class="headerlink" title="主题设置"></a>主题设置</h2><h2 id="Next"><a href="#Next" class="headerlink" title="Next"></a>Next</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><h3 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h3><h4 id="菜单栏"><a href="#菜单栏" class="headerlink" title="菜单栏"></a>菜单栏</h4><hr>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;Hexo介绍&quot;&gt;&lt;a href=&quot;#Hexo介绍&quot; class=&quot;headerlink&quot; title=&quot;Hexo介绍&quot;&gt;&lt;/a&gt;Hexo介绍&lt;/h1&gt;&lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;h2 id=&quot;前置材料&quot;&gt;&lt;a href=&quot;#前置材料&quot; class=&quot;headerlink&quot; title=&quot;前置材料&quot;&gt;&lt;/a&gt;前置材料&lt;/h2&gt;&lt;h2 id=&quot;运行&quot;&gt;&lt;a href=&quot;#运行&quot; class=&quot;headerlink&quot; title=&quot;运行&quot;&gt;&lt;/a&gt;运行&lt;/h2&gt;&lt;hr&gt;</summary>
+    <content type="html"><![CDATA[<h1 id="锤子的特点"><a href="#锤子的特点" class="headerlink" title="锤子的特点"></a>锤子的特点</h1><hr><a id="more"></a><hr>]]></content>
     
     
+    <summary type="html">&lt;h1 id=&quot;锤子的特点&quot;&gt;&lt;a href=&quot;#锤子的特点&quot; class=&quot;headerlink&quot; title=&quot;锤子的特点&quot;&gt;&lt;/a&gt;锤子的特点&lt;/h1&gt;&lt;hr&gt;</summary>
     
     
-    <category term="Hexo" scheme="http://whispering.xyz/tags/Hexo/"/>
+    
+    
+    <category term="哲学" scheme="http://whispering.xyz/tags/%E5%93%B2%E5%AD%A6/"/>
+    
+    <category term="思考" scheme="http://whispering.xyz/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
