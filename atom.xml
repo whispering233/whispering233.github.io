@@ -6,7 +6,7 @@
   <link href="http://whispering.xyz/atom.xml" rel="self"/>
   
   <link href="http://whispering.xyz/"/>
-  <updated>2020-11-23T08:09:05.363Z</updated>
+  <updated>2020-11-23T08:11:18.340Z</updated>
   <id>http://whispering.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://whispering.xyz/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
     <id>http://whispering.xyz/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
     <published>2020-11-21T14:09:52.000Z</published>
-    <updated>2020-11-23T08:09:05.363Z</updated>
+    <updated>2020-11-23T08:11:18.340Z</updated>
     
     <content type="html"><![CDATA[<h1 id="锤子的特点"><a href="#锤子的特点" class="headerlink" title="锤子的特点"></a>锤子的特点</h1><hr><a id="more"></a><hr>]]></content>
     
@@ -29,6 +29,8 @@
     <summary type="html">&lt;h1 id=&quot;锤子的特点&quot;&gt;&lt;a href=&quot;#锤子的特点&quot; class=&quot;headerlink&quot; title=&quot;锤子的特点&quot;&gt;&lt;/a&gt;锤子的特点&lt;/h1&gt;&lt;hr&gt;</summary>
     
     
+    
+    <category term="思考" scheme="http://whispering.xyz/categories/%E6%80%9D%E8%80%83/"/>
     
     
     <category term="哲学" scheme="http://whispering.xyz/tags/%E5%93%B2%E5%AD%A6/"/>
