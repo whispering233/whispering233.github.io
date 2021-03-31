@@ -23,28 +23,33 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"whispering.xyz","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":{"active":"valine"},"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false}};
   </script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="Whispering&#39;s world">
-<meta property="og:url" content="http://whispering.xyz/index.html">
+<meta name="description" content="基础分类使用场景 通用爬虫 抓取一整张页面   聚焦爬虫 抓取页面中特定的局部内容   增量式爬虫 检测网站中数据更新的数据    反爬机制robots.txt 规定网站中哪些能够爬取，哪些不能爬取。  https:&#x2F;&#x2F;www.zhihu.com&#x2F;robots.txt  User-agent: Googlebot Disallow: &#x2F;appview&#x2F; Disallow: &#x2F;login Disal">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬虫教程">
+<meta property="og:url" content="http://whispering.xyz/2021/03/31/%E7%88%AC%E8%99%AB/index.html">
 <meta property="og:site_name" content="Whispering&#39;s world">
+<meta property="og:description" content="基础分类使用场景 通用爬虫 抓取一整张页面   聚焦爬虫 抓取页面中特定的局部内容   增量式爬虫 检测网站中数据更新的数据    反爬机制robots.txt 规定网站中哪些能够爬取，哪些不能爬取。  https:&#x2F;&#x2F;www.zhihu.com&#x2F;robots.txt  User-agent: Googlebot Disallow: &#x2F;appview&#x2F; Disallow: &#x2F;login Disal">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-31T12:50:32.395Z">
+<meta property="article:modified_time" content="2021-03-31T12:52:34.053Z">
 <meta property="article:author" content="Whispering">
+<meta property="article:tag" content="计算机">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://whispering.xyz/">
+<link rel="canonical" href="http://whispering.xyz/2021/03/31/%E7%88%AC%E8%99%AB/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
-<title>Whispering's world</title>
+<title>爬虫教程 | Whispering's world</title>
   
 
 
@@ -189,7 +194,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -202,6 +207,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">1.1.1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8D%E7%88%AC%E6%9C%BA%E5%88%B6"><span class="nav-number">1.1.2.</span> <span class="nav-text">反爬机制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#robots-txt"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">robots.txt</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Example-2-%E6%8C%87%E5%AE%9A%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">1.1.2.1.1.</span> <span class="nav-text">Example_2_指定关键字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Example-3-%E5%B1%80%E9%83%A8%E5%88%B7%E6%96%B0"><span class="nav-number">1.1.2.1.2.</span> <span class="nav-text">Example_3_局部刷新</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Example-4-%E5%B1%80%E9%83%A8%E5%88%B7%E6%96%B0List"><span class="nav-number">1.1.2.1.3.</span> <span class="nav-text">Example_4_局部刷新List</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Example-5-%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96"><span class="nav-number">1.1.2.1.4.</span> <span class="nav-text">Example_5_动态获取</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90-%E8%81%9A%E7%84%A6%E7%88%AC%E8%99%AB"><span class="nav-number">1.1.3.</span> <span class="nav-text">数据解析-聚焦爬虫</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A3%E5%88%99"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">正则</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.1.3.1.1.</span> <span class="nav-text">正则表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%95%B0%E5%AD%97"><span class="nav-number">1.1.3.1.1.1.</span> <span class="nav-text">数字</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6"><span class="nav-number">1.1.3.1.1.2.</span> <span class="nav-text">字符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A"><span class="nav-number">1.1.3.1.1.3.</span> <span class="nav-text">特殊</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Example-1"><span class="nav-number">1.1.3.1.2.</span> <span class="nav-text">Example_1</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bs4-%E4%BB%85python%E5%8F%AF%E7%94%A8"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">bs4 - 仅python可用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Example-1-1"><span class="nav-number">1.1.3.2.1.</span> <span class="nav-text">Example_1</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#xpath"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">xpath</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Example-1-%E6%96%87%E6%9C%AC"><span class="nav-number">1.1.3.3.1.</span> <span class="nav-text">Example_1_文本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Example-2-%E5%B1%9E%E6%80%A7%E5%80%BC"><span class="nav-number">1.1.3.3.2.</span> <span class="nav-text">Example_2_属性值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Example-3-%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.1.3.3.3.</span> <span class="nav-text">Example_3_条件表达式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Example-4"><span class="nav-number">1.1.3.3.4.</span> <span class="nav-text">Example_4</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -269,9 +275,10 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
@@ -291,9 +298,9 @@
       <meta itemprop="name" content="Whispering's world">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/31/%E7%88%AC%E8%99%AB/" class="post-title-link" itemprop="url">爬虫教程</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          爬虫教程
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -362,7 +369,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ol>
+        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ol>
 <li>通用爬虫<ol>
 <li>抓取一整张页面</li>
 </ol>
@@ -691,8 +698,9 @@ Disallow: /*?guide*
 
 
 <h5 id="Example-4"><a href="#Example-4" class="headerlink" title="Example_4"></a>Example_4</h5>
-      
       <div>
+          
+              <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
           
       </div>
     </div>
@@ -703,135 +711,27 @@ Disallow: /*?guide*
 
     <div>
         
+            
+
+        
     </div>
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag"><i class="fas fa-tag"></i> 计算机</a>
+          </div>
 
+        
 
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://whispering.xyz/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/sword.gif">
-      <meta itemprop="name" content="Whispering">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Whispering's world">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">论锤子的世界</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-21 22:09:52" itemprop="dateCreated datePublished" datetime="2020-11-21T22:09:52+08:00">2020-11-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%80%9D%E8%80%83/" itemprop="url" rel="index"><span itemprop="name">思考</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/" class="post-meta-item leancloud_visitors" data-flag-title="论锤子的世界" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>5</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="锤子的特点"><a href="#锤子的特点" class="headerlink" title="锤子的特点"></a>锤子的特点</h1><hr>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/" rel="prev" title="论锤子的世界">
+                  <i class="fa fa-chevron-left"></i> 论锤子的世界
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-      <div>
-          
-      </div>
-    </div>
-
-    
-    
-    
-
-    <div>
-        
-    </div>
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
@@ -840,6 +740,8 @@ Disallow: /*?guide*
 
 
 
+
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -956,7 +858,7 @@ NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
     new Valine(Object.assign({"enable":true,"appId":"6m7dtd8dHwGIO0bNxeAoQCA2-MdYXbMMI","appKey":"y8zdSJiWAx5YSoG7tbTsTsb1","serverURLs":null,"placeholder":"输入你的评论\n昵称为必填项目，输入QQ号可以直接获取用户名和头像","avatar":"mp","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":true,"enableQQ":true,"requiredFields":["nick"]}, {
       el: '#valine-comments',
-      path: "/",
+      path: "/2021/03/31/%E7%88%AC%E8%99%AB/",
       serverURLs: "https://6m7dtd8d.api.lncldglobal.com"
     }));
   }, window.Valine);
