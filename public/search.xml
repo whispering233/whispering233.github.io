@@ -51,7 +51,7 @@ Disallow: /settings
 Disallow: /inbox
 Disallow: /admin_inbox
 Disallow: /*?guide*
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### UA检测</span><br><span class="line"></span><br><span class="line">1. UA：User-Agent：请求载体的身份标识</span><br><span class="line">2. 门户网站的服务器检测身份标识，不是基于浏览器则拒绝</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 反反爬机制</span><br><span class="line"></span><br><span class="line">#### UA伪装</span><br><span class="line"></span><br><span class="line">1. requests中写入头信息</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### http协议</span><br><span class="line"></span><br><span class="line">1. 数据交互形式</span><br><span class="line"></span><br><span class="line">#### 常用请求头信息</span><br><span class="line"></span><br><span class="line">1. User-Agent：请求载体的身份标识</span><br><span class="line">2. Connection: 请求完毕后，是断开连接还是保持连接</span><br><span class="line"></span><br><span class="line">#### 常用响应头信息</span><br><span class="line"></span><br><span class="line">1. Content -Type：服务器响应回客户端的数据类型</span><br><span class="line"></span><br><span class="line">### https协议</span><br><span class="line"></span><br><span class="line">1. 安全的超文本传输协议</span><br><span class="line"></span><br><span class="line">### 加密方式</span><br><span class="line"></span><br><span class="line">1. 对称秘钥加密</span><br><span class="line">   1. 公钥</span><br><span class="line">2. 非对称秘钥加密</span><br><span class="line">   1. 私钥</span><br><span class="line">3. 证书秘钥加密</span><br><span class="line">   1. 第三方机构签名</span><br><span class="line">   2. https</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"># 模块</span><br><span class="line"></span><br><span class="line">## 请求模块</span><br><span class="line"></span><br><span class="line">### Requests</span><br><span class="line"></span><br><span class="line">1. 模拟浏览器发请求</span><br><span class="line"></span><br><span class="line">#### How to use</span><br><span class="line"></span><br><span class="line">1. 制定url</span><br><span class="line">2. 发起请求</span><br><span class="line">3. 获取响应数据</span><br><span class="line">4. 持久化存储</span><br><span class="line"></span><br><span class="line">##### Example_1</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line">import requests</span><br><span class="line">if __name__&#x3D;&#x3D;&#39;__main__&#39;:</span><br><span class="line">    # 指定url</span><br><span class="line">    url &#x3D; &#39;https:&#x2F;&#x2F;www.sogo.com&#x2F;&#39;</span><br><span class="line">    # 发起请求</span><br><span class="line">    # 获取返回对象</span><br><span class="line">    response &#x3D; requests.get(url&#x3D;url)</span><br><span class="line">    # 获取响应数据</span><br><span class="line">    page_text &#x3D; response.text</span><br><span class="line">    print(page_text)</span><br><span class="line">    # 持久化存储</span><br><span class="line">    with open(&#39;.&#x2F;sogou.html&#39;,&#39;w&#39;,encoding&#x3D;&#39;utf-8&#39;) as fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    print(&#39;down&#39;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### UA检测</span><br><span class="line"></span><br><span class="line">1. UA：User-Agent：请求载体的身份标识</span><br><span class="line">2. 门户网站的服务器检测身份标识，不是基于浏览器则拒绝</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 反反爬机制</span><br><span class="line"></span><br><span class="line">#### UA伪装</span><br><span class="line"></span><br><span class="line">1. requests中写入头信息</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### http协议</span><br><span class="line"></span><br><span class="line">1. 数据交互形式</span><br><span class="line"></span><br><span class="line">#### 常用请求头信息</span><br><span class="line"></span><br><span class="line">1. User-Agent：请求载体的身份标识</span><br><span class="line">2. Connection: 请求完毕后，是断开连接还是保持连接</span><br><span class="line"></span><br><span class="line">#### 常用响应头信息</span><br><span class="line"></span><br><span class="line">1. Content -Type：服务器响应回客户端的数据类型</span><br><span class="line"></span><br><span class="line">### https协议</span><br><span class="line"></span><br><span class="line">1. 安全的超文本传输协议</span><br><span class="line"></span><br><span class="line">### 加密方式</span><br><span class="line"></span><br><span class="line">1. 对称秘钥加密</span><br><span class="line">   1. 公钥</span><br><span class="line">2. 非对称秘钥加密</span><br><span class="line">   1. 私钥</span><br><span class="line">3. 证书秘钥加密</span><br><span class="line">   1. 第三方机构签名</span><br><span class="line">   2. https</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">&lt;i--more--&gt;</span><br><span class="line"># 模块</span><br><span class="line"></span><br><span class="line">## 请求模块</span><br><span class="line"></span><br><span class="line">### Requests</span><br><span class="line"></span><br><span class="line">1. 模拟浏览器发请求</span><br><span class="line"></span><br><span class="line">#### How to use</span><br><span class="line"></span><br><span class="line">1. 制定url</span><br><span class="line">2. 发起请求</span><br><span class="line">3. 获取响应数据</span><br><span class="line">4. 持久化存储</span><br><span class="line"></span><br><span class="line">##### Example_1</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line">import requests</span><br><span class="line">if __name__&#x3D;&#x3D;&#39;__main__&#39;:</span><br><span class="line">    # 指定url</span><br><span class="line">    url &#x3D; &#39;https:&#x2F;&#x2F;www.sogo.com&#x2F;&#39;</span><br><span class="line">    # 发起请求</span><br><span class="line">    # 获取返回对象</span><br><span class="line">    response &#x3D; requests.get(url&#x3D;url)</span><br><span class="line">    # 获取响应数据</span><br><span class="line">    page_text &#x3D; response.text</span><br><span class="line">    print(page_text)</span><br><span class="line">    # 持久化存储</span><br><span class="line">    with open(&#39;.&#x2F;sogou.html&#39;,&#39;w&#39;,encoding&#x3D;&#39;utf-8&#39;) as fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    print(&#39;down&#39;)</span><br></pre></td></tr></table></figure>
 </code></pre>
 </li>
 </ol>
@@ -349,10 +349,77 @@ Disallow: /*?guide*
 
 <h5 id="Example-4"><a href="#Example-4" class="headerlink" title="Example_4"></a>Example_4</h5>]]></content>
       <categories>
-        <category>工具</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>计算机</tag>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo常用命令</title>
+    <url>/2021/04/16/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li>npm install hexo -g<ol>
+<li>安装</li>
+</ol>
+</li>
+<li>npm update hexo -g<ol>
+<li>升级</li>
+</ol>
+</li>
+<li>hexo init<ol>
+<li>初始化</li>
+</ol>
+</li>
+</ol>
+<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ol>
+<li>hexo new page  &lt;title&gt; ; hexo n</li>
+<li>hexo new post &lt;title&gt;<ol>
+<li>page 与 post 的区别<ol>
+<li>post指文章、日志，会按时间顺序排列在博客上</li>
+<li>page指页面，不受时间规则影响，内容很少改变</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><ol>
+<li>hexo generate ; hexo g<ol>
+<li>生成静态页面至public目录</li>
+</ol>
+</li>
+<li>hexo server<ol>
+<li>开启预览访问端口</li>
+</ol>
+</li>
+<li>hexo deploy ; hexo d<ol>
+<li>部署到服务器</li>
+</ol>
+</li>
+<li>hexo d -g<ol>
+<li>合并使用</li>
+</ol>
+</li>
+</ol>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol>
+<li><p>hexo clean</p>
+<ol>
+<li>清除缓存</li>
+</ol>
+</li>
+<li><i--more-->
+
+<ol>
+<li>只显示之前的内容</li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>命令</tag>
       </tags>
   </entry>
   <entry>
