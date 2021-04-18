@@ -6,7 +6,7 @@
   <link href="http://whispering.xyz/atom.xml" rel="self"/>
   
   <link href="http://whispering.xyz/"/>
-  <updated>2021-04-16T16:34:16.042Z</updated>
+  <updated>2021-04-18T09:30:44.474Z</updated>
   <id>http://whispering.xyz/</id>
   
   <author>
@@ -17,206 +17,336 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>求100以内所有质数</title>
-    <link href="http://whispering.xyz/2021/04/17/%E6%B1%82100%E4%BB%A5%E5%86%85%E6%89%80%E6%9C%89%E8%B4%A8%E6%95%B0/"/>
-    <id>http://whispering.xyz/2021/04/17/%E6%B1%82100%E4%BB%A5%E5%86%85%E6%89%80%E6%9C%89%E8%B4%A8%E6%95%B0/</id>
-    <published>2021-04-16T16:33:15.000Z</published>
-    <updated>2021-04-16T16:34:16.042Z</updated>
-    
-    <content type="html"><![CDATA[<p>所有代码用Jave做示例</p><ol><li><p>所谓质数，即是除1和其本身外不能被其他数整除</p><ol><li><p>首先需要循环遍历所有数字，逐个做判断，根据其定义自然有</p><ol><li><pre><code class="java">class PrimeNumber &#123;    public static void main(String[] args)&#123;        // FLag        boolean isFlag = true;        for(int i = 2;i &lt; 100;i++)&#123;            for(int j = 2;j &lt; 2;j++)&#123;                if(i % j == 0)&#123;                    isFlag = false;                &#125;            &#125;            if(isFlag == true)&#123;                System.Out.println(i);            &#125;        //重置Flag            isFlag = true    &#125;&#125;</code></pre></li></ol></li><li><p>时间复杂度分析</p><ol><li></li></ol></li></ol></li></ol>]]></content>
+    <title>《庄子》解读</title>
+    <link href="http://whispering.xyz/2021/04/18/%E3%80%8A%E5%BA%84%E5%AD%90%E3%80%8B%E8%A7%A3%E8%AF%BB/"/>
+    <id>http://whispering.xyz/2021/04/18/%E3%80%8A%E5%BA%84%E5%AD%90%E3%80%8B%E8%A7%A3%E8%AF%BB/</id>
+    <published>2021-04-18T09:29:36.000Z</published>
+    <updated>2021-04-18T09:30:44.474Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;所有代码用Jave做示例&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;所谓质数，即是除1和其本身外不能被其他数整除&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;首先需要循环遍历所有数字，逐个做判断，根据其定义自然有&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;clas</summary>
-      
+    
+    
+    <category term="诸子百家" scheme="http://whispering.xyz/categories/%E8%AF%B8%E5%AD%90%E7%99%BE%E5%AE%B6/"/>
+    
+    
+    <category term="-韩非子" scheme="http://whispering.xyz/tags/%E9%9F%A9%E9%9D%9E%E5%AD%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《老子》解读</title>
+    <link href="http://whispering.xyz/2021/04/18/%E3%80%8A%E8%80%81%E5%AD%90%E3%80%8B%E8%A7%A3%E8%AF%BB/"/>
+    <id>http://whispering.xyz/2021/04/18/%E3%80%8A%E8%80%81%E5%AD%90%E3%80%8B%E8%A7%A3%E8%AF%BB/</id>
+    <published>2021-04-18T09:29:21.000Z</published>
+    <updated>2021-04-18T09:30:44.489Z</updated>
+    
+    
+    
+    
+    <category term="诸子百家" scheme="http://whispering.xyz/categories/%E8%AF%B8%E5%AD%90%E7%99%BE%E5%AE%B6/"/>
+    
+    
+    <category term="-韩非子" scheme="http://whispering.xyz/tags/%E9%9F%A9%E9%9D%9E%E5%AD%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>加缪</title>
+    <link href="http://whispering.xyz/2021/04/18/%E5%8A%A0%E7%BC%AA/"/>
+    <id>http://whispering.xyz/2021/04/18/%E5%8A%A0%E7%BC%AA/</id>
+    <published>2021-04-18T09:26:56.000Z</published>
+    <updated>2021-04-18T09:29:00.331Z</updated>
+    
+    
+    
+    
+    <category term="文学" scheme="http://whispering.xyz/categories/%E6%96%87%E5%AD%A6/"/>
+    
+    
+    <category term="-加缪 -荒诞" scheme="http://whispering.xyz/tags/%E5%8A%A0%E7%BC%AA-%E8%8D%92%E8%AF%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>陀思妥耶夫斯基</title>
+    <link href="http://whispering.xyz/2021/04/18/%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA/"/>
+    <id>http://whispering.xyz/2021/04/18/%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA/</id>
+    <published>2021-04-18T09:26:47.000Z</published>
+    <updated>2021-04-18T09:29:00.324Z</updated>
+    
+    
+    
+    
+    <category term="文学" scheme="http://whispering.xyz/categories/%E6%96%87%E5%AD%A6/"/>
+    
+    
+    <category term="-陀思妥耶夫斯基" scheme="http://whispering.xyz/tags/%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>卡夫卡</title>
+    <link href="http://whispering.xyz/2021/04/18/%E5%8D%A1%E5%A4%AB%E5%8D%A1/"/>
+    <id>http://whispering.xyz/2021/04/18/%E5%8D%A1%E5%A4%AB%E5%8D%A1/</id>
+    <published>2021-04-18T09:26:36.000Z</published>
+    <updated>2021-04-18T09:29:00.335Z</updated>
+    
+    
+    
+    
+    <category term="文学" scheme="http://whispering.xyz/categories/%E6%96%87%E5%AD%A6/"/>
+    
+    
+    <category term="-卡夫卡 -荒诞" scheme="http://whispering.xyz/tags/%E5%8D%A1%E5%A4%AB%E5%8D%A1-%E8%8D%92%E8%AF%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>加西亚·马尔克斯</title>
+    <link href="http://whispering.xyz/2021/04/18/%E5%8A%A0%E8%A5%BF%E4%BA%9A%C2%B7%E9%A9%AC%E5%B0%94%E5%85%8B%E6%96%AF/"/>
+    <id>http://whispering.xyz/2021/04/18/%E5%8A%A0%E8%A5%BF%E4%BA%9A%C2%B7%E9%A9%AC%E5%B0%94%E5%85%8B%E6%96%AF/</id>
+    <published>2021-04-18T09:26:24.000Z</published>
+    <updated>2021-04-18T09:26:24.713Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>叔本华</title>
+    <link href="http://whispering.xyz/2021/04/18/%E5%8F%94%E6%9C%AC%E5%8D%8E/"/>
+    <id>http://whispering.xyz/2021/04/18/%E5%8F%94%E6%9C%AC%E5%8D%8E/</id>
+    <published>2021-04-18T09:25:40.000Z</published>
+    <updated>2021-04-18T09:26:07.530Z</updated>
+    
+    
+    
+    
+    <category term="哲学" scheme="http://whispering.xyz/categories/%E5%93%B2%E5%AD%A6/"/>
+    
+    
+    <category term="-西方哲学" scheme="http://whispering.xyz/tags/%E8%A5%BF%E6%96%B9%E5%93%B2%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《资治通鉴》汉纪11-15卷</title>
+    <link href="http://whispering.xyz/2021/04/18/%E3%80%8A%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4%E3%80%8B%E6%B1%89%E7%BA%AA11-15%E5%8D%B7/"/>
+    <id>http://whispering.xyz/2021/04/18/%E3%80%8A%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4%E3%80%8B%E6%B1%89%E7%BA%AA11-15%E5%8D%B7/</id>
+    <published>2021-04-18T09:20:56.000Z</published>
+    <updated>2021-04-18T09:25:30.979Z</updated>
+    
+    
+    
+    
+    <category term="历史" scheme="http://whispering.xyz/categories/%E5%8E%86%E5%8F%B2/"/>
+    
+    
+    <category term="-资治通鉴" scheme="http://whispering.xyz/tags/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《资治通鉴》汉纪6-10卷</title>
+    <link href="http://whispering.xyz/2021/04/18/%E3%80%8A%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4%E3%80%8B%E6%B1%89%E7%BA%AA6-10%E5%8D%B7/"/>
+    <id>http://whispering.xyz/2021/04/18/%E3%80%8A%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4%E3%80%8B%E6%B1%89%E7%BA%AA6-10%E5%8D%B7/</id>
+    <published>2021-04-18T09:20:27.000Z</published>
+    <updated>2021-04-18T09:25:30.974Z</updated>
+    
+    
+    
+    
+    <category term="历史" scheme="http://whispering.xyz/categories/%E5%8E%86%E5%8F%B2/"/>
+    
+    
+    <category term="-资治通鉴" scheme="http://whispering.xyz/tags/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《资治通鉴》汉纪5卷</title>
+    <link href="http://whispering.xyz/2021/04/18/%E3%80%8A%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4%E3%80%8B%E6%B1%89%E7%BA%AA5%E5%8D%B7/"/>
+    <id>http://whispering.xyz/2021/04/18/%E3%80%8A%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4%E3%80%8B%E6%B1%89%E7%BA%AA5%E5%8D%B7/</id>
+    <published>2021-04-18T09:20:01.000Z</published>
+    <updated>2021-04-18T09:25:30.963Z</updated>
+    
+    
+    
+    
+    <category term="历史" scheme="http://whispering.xyz/categories/%E5%8E%86%E5%8F%B2/"/>
+    
+    
+    <category term="-资治通鉴" scheme="http://whispering.xyz/tags/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《资治通鉴》秦纪三卷</title>
+    <link href="http://whispering.xyz/2021/04/18/%E3%80%8A%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4%E3%80%8B%E7%A7%A6%E7%BA%AA%E4%B8%89%E5%8D%B7/"/>
+    <id>http://whispering.xyz/2021/04/18/%E3%80%8A%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4%E3%80%8B%E7%A7%A6%E7%BA%AA%E4%B8%89%E5%8D%B7/</id>
+    <published>2021-04-18T09:18:59.000Z</published>
+    <updated>2021-04-18T09:25:30.984Z</updated>
+    
+    
+    
+    
+    <category term="历史" scheme="http://whispering.xyz/categories/%E5%8E%86%E5%8F%B2/"/>
+    
+    
+    <category term="-资治通鉴" scheme="http://whispering.xyz/tags/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《资治通鉴》周纪五卷</title>
+    <link href="http://whispering.xyz/2021/04/18/%E3%80%8A%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4%E3%80%8B%E5%91%A8%E7%BA%AA%E4%BA%94%E5%8D%B7/"/>
+    <id>http://whispering.xyz/2021/04/18/%E3%80%8A%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4%E3%80%8B%E5%91%A8%E7%BA%AA%E4%BA%94%E5%8D%B7/</id>
+    <published>2021-04-18T09:18:11.000Z</published>
+    <updated>2021-04-18T09:30:44.478Z</updated>
+    
+    
+    
+    
+    <category term="历史" scheme="http://whispering.xyz/categories/%E5%8E%86%E5%8F%B2/"/>
+    
+    
+    <category term="-资治通鉴" scheme="http://whispering.xyz/tags/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《韩非子》解读</title>
+    <link href="http://whispering.xyz/2021/04/18/%E3%80%8A%E9%9F%A9%E9%9D%9E%E5%AD%90%E3%80%8B%E8%A7%A3%E8%AF%BB/"/>
+    <id>http://whispering.xyz/2021/04/18/%E3%80%8A%E9%9F%A9%E9%9D%9E%E5%AD%90%E3%80%8B%E8%A7%A3%E8%AF%BB/</id>
+    <published>2021-04-18T09:15:52.000Z</published>
+    <updated>2021-04-18T09:30:44.482Z</updated>
+    
+    
+    
+    
+    <category term="诸子百家" scheme="http://whispering.xyz/categories/%E8%AF%B8%E5%AD%90%E7%99%BE%E5%AE%B6/"/>
+    
+    
+    <category term="-韩非子 -政治" scheme="http://whispering.xyz/tags/%E9%9F%A9%E9%9D%9E%E5%AD%90-%E6%94%BF%E6%B2%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《孙子兵法》解读</title>
+    <link href="http://whispering.xyz/2021/04/18/%E5%AD%99%E5%AD%90%E5%85%B5%E6%B3%95%E8%A7%A3%E8%AF%BB/"/>
+    <id>http://whispering.xyz/2021/04/18/%E5%AD%99%E5%AD%90%E5%85%B5%E6%B3%95%E8%A7%A3%E8%AF%BB/</id>
+    <published>2021-04-18T09:15:33.000Z</published>
+    <updated>2021-04-18T09:30:44.485Z</updated>
+    
+    
+    
+    
+    <category term="诸子百家" scheme="http://whispering.xyz/categories/%E8%AF%B8%E5%AD%90%E7%99%BE%E5%AE%B6/"/>
+    
+    
+    <category term="-韩非子 -军事" scheme="http://whispering.xyz/tags/%E9%9F%A9%E9%9D%9E%E5%AD%90-%E5%86%9B%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>弗洛伊德</title>
+    <link href="http://whispering.xyz/2021/04/18/%E5%BC%97%E6%B4%9B%E4%BC%8A%E5%BE%B7/"/>
+    <id>http://whispering.xyz/2021/04/18/%E5%BC%97%E6%B4%9B%E4%BC%8A%E5%BE%B7/</id>
+    <published>2021-04-18T09:14:50.000Z</published>
+    <updated>2021-04-18T09:25:31.025Z</updated>
+    
+    
+    
+    
+    <category term="心理学" scheme="http://whispering.xyz/categories/%E5%BF%83%E7%90%86%E5%AD%A6/"/>
+    
+    
+    <category term="-精神分析" scheme="http://whispering.xyz/tags/%E7%B2%BE%E7%A5%9E%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css3解读</title>
+    <link href="http://whispering.xyz/2021/04/18/css3%E8%A7%A3%E8%AF%BB/"/>
+    <id>http://whispering.xyz/2021/04/18/css3%E8%A7%A3%E8%AF%BB/</id>
+    <published>2021-04-18T09:13:47.000Z</published>
+    <updated>2021-04-18T09:25:30.989Z</updated>
+    
+    
+    
+    
+    <category term="计算机技术" scheme="http://whispering.xyz/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="-前端" scheme="http://whispering.xyz/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《周易》解析</title>
+    <link href="http://whispering.xyz/2021/04/18/%E5%91%A8%E6%98%93%E8%A7%A3%E6%9E%90/"/>
+    <id>http://whispering.xyz/2021/04/18/%E5%91%A8%E6%98%93%E8%A7%A3%E6%9E%90/</id>
+    <published>2021-04-18T09:13:20.000Z</published>
+    <updated>2021-04-18T09:25:30.967Z</updated>
+    
+    
+    
+    
+    <category term="哲学" scheme="http://whispering.xyz/categories/%E5%93%B2%E5%AD%A6/"/>
+    
+    
+    <category term="-中国哲学" scheme="http://whispering.xyz/tags/%E4%B8%AD%E5%9B%BD%E5%93%B2%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>十大排序算法分析</title>
+    <link href="http://whispering.xyz/2021/04/18/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/"/>
+    <id>http://whispering.xyz/2021/04/18/%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/</id>
+    <published>2021-04-18T09:11:11.000Z</published>
+    <updated>2021-04-18T09:25:31.021Z</updated>
+    
     
     
     
     <category term="算法" scheme="http://whispering.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="-算法分析" scheme="http://whispering.xyz/tags/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/"/>
+    <category term="-算法排序" scheme="http://whispering.xyz/tags/%E7%AE%97%E6%B3%95%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
-    <title>Hexo常用命令</title>
-    <link href="http://whispering.xyz/2021/04/16/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://whispering.xyz/2021/04/16/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
-    <published>2021-04-16T15:55:50.000Z</published>
-    <updated>2021-04-16T16:02:10.042Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li>npm install hexo -g<ol><li>安装</li></ol></li><li>npm update hexo -g<ol><li>升级</li></ol></li><li>hexo init<ol><li>初始化</li></ol></li></ol><h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ol><li>hexo new page  &lt;title&gt; ; hexo n</li><li>hexo new post &lt;title&gt;<ol><li>page 与 post 的区别<ol><li>post指文章、日志，会按时间顺序排列在博客上</li><li>page指页面，不受时间规则影响，内容很少改变</li></ol></li></ol></li></ol><h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><ol><li>hexo generate ; hexo g<ol><li>生成静态页面至public目录</li></ol></li><li>hexo server<ol><li>开启预览访问端口</li></ol></li><li>hexo deploy ; hexo d<ol><li>部署到服务器</li></ol></li><li>hexo d -g<ol><li>合并使用</li></ol></li></ol><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol><li><p>hexo clean</p><ol><li>清除缓存</li></ol></li><li><a id="more"></a><ol><li>只显示之前的内容</li></ol></li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;Hexo-常用命令&quot;&gt;&lt;a href=&quot;#Hexo-常用命令&quot; class=&quot;headerlink&quot; title=&quot;Hexo 常用命令&quot;&gt;&lt;/a&gt;Hexo 常用命令&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;npm install hexo -g&lt;ol&gt;
-&lt;li&gt;安装&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;npm update hexo -g&lt;ol&gt;
-&lt;li&gt;升级&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;hexo init&lt;ol&gt;
-&lt;li&gt;初始化&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;新建文章&quot;&gt;&lt;a href=&quot;#新建文章&quot; class=&quot;headerlink&quot; title=&quot;新建文章&quot;&gt;&lt;/a&gt;新建文章&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;hexo new page  &amp;lt;title&amp;gt; ; hexo n&lt;/li&gt;
-&lt;li&gt;hexo new post &amp;lt;title&amp;gt;&lt;ol&gt;
-&lt;li&gt;page 与 post 的区别&lt;ol&gt;
-&lt;li&gt;post指文章、日志，会按时间顺序排列在博客上&lt;/li&gt;
-&lt;li&gt;page指页面，不受时间规则影响，内容很少改变&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;发布&quot;&gt;&lt;a href=&quot;#发布&quot; class=&quot;headerlink&quot; title=&quot;发布&quot;&gt;&lt;/a&gt;发布&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;hexo generate ; hexo g&lt;ol&gt;
-&lt;li&gt;生成静态页面至public目录&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;hexo server&lt;ol&gt;
-&lt;li&gt;开启预览访问端口&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;hexo deploy ; hexo d&lt;ol&gt;
-&lt;li&gt;部署到服务器&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;hexo d -g&lt;ol&gt;
-&lt;li&gt;合并使用&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;其他&quot;&gt;&lt;a href=&quot;#其他&quot; class=&quot;headerlink&quot; title=&quot;其他&quot;&gt;&lt;/a&gt;其他&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;hexo clean&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;清除缓存&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;</summary>
+    <title>java_面对对象</title>
+    <link href="http://whispering.xyz/2021/04/18/java_%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://whispering.xyz/2021/04/18/java_%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1/</id>
+    <published>2021-04-18T09:10:46.000Z</published>
+    <updated>2021-04-18T09:25:31.006Z</updated>
     
     
     
-    <category term="Hexo" scheme="http://whispering.xyz/categories/Hexo/"/>
+    
+    <category term="计算机思想" scheme="http://whispering.xyz/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%9D%E6%83%B3/"/>
     
     
-    <category term="命令" scheme="http://whispering.xyz/tags/%E5%91%BD%E4%BB%A4/"/>
+    <category term="-java" scheme="http://whispering.xyz/tags/java/"/>
     
   </entry>
   
   <entry>
-    <title>爬虫教程</title>
-    <link href="http://whispering.xyz/2021/03/31/%E7%88%AC%E8%99%AB/"/>
-    <id>http://whispering.xyz/2021/03/31/%E7%88%AC%E8%99%AB/</id>
-    <published>2021-03-31T12:50:32.395Z</published>
-    <updated>2021-04-16T16:07:27.328Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ol><li>通用爬虫<ol><li>抓取一整张页面</li></ol></li><li>聚焦爬虫<ol><li>抓取页面中特定的局部内容</li></ol></li><li>增量式爬虫<ol><li>检测网站中数据更新的数据</li></ol></li></ol><h3 id="反爬机制"><a href="#反爬机制" class="headerlink" title="反爬机制"></a>反爬机制</h3><h4 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt"></a>robots.txt</h4><ol><li><p>规定网站中哪些能够爬取，哪些不能爬取。</p><ol><li><p><a href="https://www.zhihu.com/robots.txt">https://www.zhihu.com/robots.txt</a></p></li><li><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">User-agent: Googlebot</span><br><span class="line">Disallow: /appview/</span><br><span class="line">Disallow: /login</span><br><span class="line">Disallow: /logout</span><br><span class="line">Disallow: /resetpassword</span><br><span class="line">Disallow: /terms</span><br><span class="line">Disallow: /search</span><br><span class="line">Allow: /search-special</span><br><span class="line">Disallow: /notifications</span><br><span class="line">Disallow: /settings</span><br><span class="line">Disallow: /inbox</span><br><span class="line">Disallow: /admin_inbox</span><br><span class="line">Disallow: /*?guide*</span><br></pre></td></tr></table></figure></li></ol></li></ol><h4 id="UA检测"><a href="#UA检测" class="headerlink" title="UA检测"></a>UA检测</h4><ol><li>UA：User-Agent：请求载体的身份标识</li><li>门户网站的服务器检测身份标识，不是基于浏览器则拒绝</li></ol><h3 id="反反爬机制"><a href="#反反爬机制" class="headerlink" title="反反爬机制"></a>反反爬机制</h3><h4 id="UA伪装"><a href="#UA伪装" class="headerlink" title="UA伪装"></a>UA伪装</h4><ol><li>requests中写入头信息</li></ol><h3 id="http协议"><a href="#http协议" class="headerlink" title="http协议"></a>http协议</h3><ol><li>数据交互形式</li></ol><h4 id="常用请求头信息"><a href="#常用请求头信息" class="headerlink" title="常用请求头信息"></a>常用请求头信息</h4><ol><li>User-Agent：请求载体的身份标识</li><li>Connection: 请求完毕后，是断开连接还是保持连接</li></ol><h4 id="常用响应头信息"><a href="#常用响应头信息" class="headerlink" title="常用响应头信息"></a>常用响应头信息</h4><ol><li>Content -Type：服务器响应回客户端的数据类型</li></ol><h3 id="https协议"><a href="#https协议" class="headerlink" title="https协议"></a>https协议</h3><ol><li>安全的超文本传输协议</li></ol><h3 id="加密方式"><a href="#加密方式" class="headerlink" title="加密方式"></a>加密方式</h3><ol><li>对称秘钥加密<ol><li>公钥</li></ol></li><li>非对称秘钥加密<ol><li>私钥</li></ol></li><li>证书秘钥加密<ol><li>第三方机构签名</li><li>https</li></ol></li></ol><hr><a id="more"></a><h1 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h1><h2 id="请求模块"><a href="#请求模块" class="headerlink" title="请求模块"></a>请求模块</h2><h3 id="Requests"><a href="#Requests" class="headerlink" title="Requests"></a>Requests</h3><ol><li>模拟浏览器发请求</li></ol><h4 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a>How to use</h4><ol><li>制定url</li><li>发起请求</li><li>获取响应数据</li><li>持久化存储</li></ol><h5 id="Example-1"><a href="#Example-1" class="headerlink" title="Example_1"></a>Example_1</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 指定url</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogo.com/&#x27;</span></span><br><span class="line">    <span class="comment"># 发起请求</span></span><br><span class="line">    <span class="comment"># 获取返回对象</span></span><br><span class="line">    response = requests.get(url=url)</span><br><span class="line">    <span class="comment"># 获取响应数据</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    print(page_text)</span><br><span class="line">    <span class="comment"># 持久化存储</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./sogou.html&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    print(<span class="string">&#x27;down&#x27;</span>)</span><br></pre></td></tr></table></figure><h5 id="Example-2-指定关键字"><a href="#Example-2-指定关键字" class="headerlink" title="Example_2_指定关键字"></a>Example_2_指定关键字</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># UA伪装：将对应的User-Agent封装到一个字典中</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    url = <span class="string">&#x27;https://www.sogo.com/web&#x27;</span></span><br><span class="line">    <span class="comment"># 处理url携带的参数，封装进字典</span></span><br><span class="line">    kw = <span class="built_in">input</span>(<span class="string">&#x27;enter a word:&#x27;</span>)</span><br><span class="line">    param = &#123;</span><br><span class="line">        <span class="string">&#x27;query&#x27;</span>: kw</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># 在请求时处理参数</span></span><br><span class="line">    response = requests.get(url=url, params=param, headers=headers)</span><br><span class="line">    page_text = response.text</span><br><span class="line">    fileName = kw+ <span class="string">&#x27;.html&#x27;</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(fileName, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)<span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    print(fileName, <span class="string">&#x27;down&#x27;</span>)</span><br></pre></td></tr></table></figure><h5 id="Example-3-局部刷新"><a href="#Example-3-局部刷新" class="headerlink" title="Example_3_局部刷新"></a>Example_3_局部刷新</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># 指定url</span></span><br><span class="line">    post_url = <span class="string">&#x27;https://fanyi.baidu.com/sug&#x27;</span></span><br><span class="line">    <span class="comment"># UA伪装</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># Post请求参数处理</span></span><br><span class="line">    word = <span class="built_in">input</span>(<span class="string">&#x27;enter a word:&#x27;</span>)</span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">&#x27;kw&#x27;</span>: word</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># 请求发送</span></span><br><span class="line">    response = requests.post(url=post_url, data=data, headers=headers)</span><br><span class="line">    <span class="comment"># json方法返回的是obj</span></span><br><span class="line">    dic_obj = response.json()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储</span></span><br><span class="line">    fileName = word+<span class="string">&#x27;.json&#x27;</span></span><br><span class="line">    fp = <span class="built_in">open</span>(fileName, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(dic_obj,fp=fp, ensure_ascii=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">    print(<span class="string">&#x27;down&#x27;</span>)</span><br></pre></td></tr></table></figure><h5 id="Example-4-局部刷新List"><a href="#Example-4-局部刷新List" class="headerlink" title="Example_4_局部刷新List"></a>Example_4_局部刷新List</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 指定url</span></span><br><span class="line">    <span class="comment"># url也不一定是在页面网址里获得，而是要看浏览器实际发送的请求地址</span></span><br><span class="line">    url = <span class="string">&#x27;https://movie.douban.com/j/chart/top_list&#x27;</span></span><br><span class="line">    <span class="comment"># UA伪装</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># 动态查询, 请求参数并不是从网址里直接得出，而是看浏览器发送的请求</span></span><br><span class="line">    <span class="comment"># start = input(&#x27;enter start&#x27;)</span></span><br><span class="line">    <span class="comment"># limit = input(&#x27;enter limit&#x27;)</span></span><br><span class="line">    params = &#123;</span><br><span class="line">        <span class="string">&#x27;type&#x27;</span>: <span class="string">&#x27;24&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;interval_id&#x27;</span>: <span class="string">&#x27;100:90&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;action&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;start&#x27;</span>: <span class="string">&#x27;0&#x27;</span>, <span class="comment"># 第几部电影开始取</span></span><br><span class="line">        <span class="string">&#x27;limit&#x27;</span>: <span class="string">&#x27;20&#x27;</span>, <span class="comment"># 一次取出几个</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.get(url=url, params=params, headers=headers)</span><br><span class="line">    list_data = response.json()</span><br><span class="line"></span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./douban.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(list_data, fp=fp, ensure_ascii=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">    print(<span class="string">&#x27;down&#x27;</span>)</span><br></pre></td></tr></table></figure><h5 id="Example-5-动态获取"><a href="#Example-5-动态获取" class="headerlink" title="Example_5_动态获取"></a>Example_5_动态获取</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsList&#x27;</span></span><br><span class="line">    post_url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsById&#x27;</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    id_list = []</span><br><span class="line">    all_data_list = []</span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">2</span>):</span><br><span class="line">        page = <span class="built_in">str</span>(page)</span><br><span class="line">        data = &#123;</span><br><span class="line">            <span class="string">&#x27;on&#x27;</span>: <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;page&#x27;</span>: page,</span><br><span class="line">            <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;productName&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;conditionType&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applyname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">        json_ids = requests.post(url=url, headers=headers, data=data).json()</span><br><span class="line">        <span class="keyword">for</span> dic <span class="keyword">in</span> json_ids[<span class="string">&#x27;list&#x27;</span>]:</span><br><span class="line">            id_list.append(dic[<span class="string">&#x27;ID&#x27;</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> id_detail <span class="keyword">in</span> id_list:</span><br><span class="line">        detail_data = &#123;</span><br><span class="line">            <span class="string">&#x27;id&#x27;</span>: id_detail</span><br><span class="line">        &#125;</span><br><span class="line">        detail_json = requests.post(url=post_url, headers=headers, data=detail_data).json()</span><br><span class="line">        all_data_list.append(detail_json)</span><br><span class="line">    print(<span class="string">&#x27;down&#x27;</span>)</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./allData.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(all_data_list, fp=fp, ensure_ascii=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure><h3 id="数据解析-聚焦爬虫"><a href="#数据解析-聚焦爬虫" class="headerlink" title="数据解析-聚焦爬虫"></a>数据解析-聚焦爬虫</h3><ol><li>解析的内容<ol><li>标签</li><li>标签属性中</li></ol></li><li>进行指定标签的定位<ol><li>标签或对应标签属性的属性值进行提取（解析）</li></ol></li><li>流程<ol><li>指定url</li><li>发起请求</li><li>获取响应数据</li><li>数据解析</li><li>持久化存储</li></ol></li></ol><h4 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h4><h5 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h5><h6 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h6><ol><li><p>数字：^[0-9]*$</p></li><li><p>n位的数字：^\d{n}$</p></li><li><p>至少n位的数字：^\d{n,}$</p></li><li><p>m-n位的数字：^\d{m,n}$</p></li><li><p>零和非零开头的数字：^(0|[1-9][0-9]*)$</p></li><li><p>非零开头的最多带两位小数的数字：^([1-9][0-9]*)+(.[0-9]{1,2})?$</p></li><li><p>带1-2位小数的正数或负数：^(-)?\d+(.\d{1,2})?$</p></li><li><p>正数、负数、和小数：^(-|+)?\d+(.\d+)?$</p></li><li><p>有两位小数的正实数：^[0-9]+(.[0-9]{2})?$</p></li><li><p>有1~3位小数的正实数：^[0-9]+(.[0-9]{1,3})?$</p></li><li><p>非零的正整数：^[1-9]\d*$ 或 ^([1-9][0-9]<em>){1,3}$ 或 ^+?[1-9][0-9]</em>$</p></li><li><p>非零的负整数：^-[1-9][]0-9”<em>$ 或 ^-[1-9]\d</em>$</p></li><li><p>非负整数：^\d+$ 或 ^[1-9]\d*|0$</p></li><li><p>非正整数：^-[1-9]\d*|0$ 或 ^((-\d+)|(0+))$</p></li><li><p>非负浮点数：^\d+(.\d+)?$ 或 ^[1-9]\d<em>.\d</em>|0.\d*[1-9]\d*|0?.0+|0$</p></li><li><p>非正浮点数：^((-\d+(.\d+)?)|(0+(.0+)?))$ 或 ^(-([1-9]\d<em>.\d</em>|0.\d*[1-9]\d*))|0?.0+|0$</p></li><li><p>正浮点数：^[1-9]\d<em>.\d</em>|0.\d*[1-9]\d*$ 或 ^(([0-9]+.[0-9]<em>[1-9][0-9]</em>)|([0-9]<em>[1-9][0-9]<em>.[0-9]+)|([0-9]</em>[1-9][0-9]</em>))$</p></li><li><p>负浮点数：^-([1-9]\d<em>.\d</em>|0.\d*[1-9]\d*)$ 或 ^(-(([0-9]+.[0-9]<em>[1-9][0-9]</em>)|([0-9]<em>[1-9][0-9]<em>.[0-9]+)|([0-9]</em>[1-9][0-9]</em>)))$</p></li><li><p>浮点数：^(-?\d+)(.\d+)?$ 或 ^-?([1-9]\d<em>.\d</em>|0.\d*[1-9]\d*|0?.0+|0)$</p></li></ol><h6 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h6><ol><li><p>汉字：^[\u4e00-\u9fa5]{0,}$</p></li><li><p>英文和数字：^[A-Za-z0-9]+$ 或 ^[A-Za-z0-9]{4,40}$</p></li><li><p>长度为3-20的所有字符：^.{3,20}$</p></li><li><p>由26个英文字母组成的字符串：^[A-Za-z]+$</p></li><li><p>由26个大写英文字母组成的字符串：^[A-Z]+$</p></li><li><p>由26个小写英文字母组成的字符串：^[a-z]+$</p></li><li><p>由数字和26个英文字母组成的字符串：^[A-Za-z0-9]+$</p></li><li><p>由数字、26个英文字母或者下划线组成的字符串：^\w+$ 或 ^\w{3,20}$</p></li><li><p>中文、英文、数字包括下划线：^[\u4E00-\u9FA5A-Za-z0-9_]+$</p></li><li><p>中文、英文、数字但不包括下划线等符号：^[\u4E00-\u9FA5A-Za-z0-9]+$ 或 ^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$</p></li><li><p>可以输入含有^%&amp;’,;=?$&quot;等字符：[^%&amp;’,;=?$\x22]+ 12 禁止输入含有<del>的字符：[^</del>\x22]+</p></li></ol><h6 id="特殊"><a href="#特殊" class="headerlink" title="特殊"></a>特殊</h6><ol><li><p>Email地址：^\w+([-+.]\w+)*@\w+([-.]\w+)<em>.\w+([-.]\w+)</em>$</p></li><li><p>域名：[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?</p></li><li><p>InternetURL：[a-zA-z]+://[^\s]* 或 ^http://([\w-]+.)+[\w-]+(/[\w-./?%&amp;=]*)?$</p></li><li><p>手机号码：^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$</p></li><li><p>电话号码(“XXX-XXXXXXX”、”XXXX-XXXXXXXX”、”XXX-XXXXXXX”、”XXX-XXXXXXXX”、”XXXXXXX”和”XXXXXXXX)：^((\d{3,4}-)|\d{3.4}-)?\d{7,8}$</p></li><li><p>国内电话号码(0511-4405222、021-87888822)：\d{3}-\d{8}|\d{4}-\d{7}</p></li><li><p>身份证号(15位、18位数字)：^\d{15}|\d{18}$</p></li><li><p>短身份证号码(数字、字母x结尾)：^([0-9]){7,18}(x|X)?$ 或 ^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$</p></li><li><p>帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$</p></li><li><p>密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)：^[a-zA-Z]\w{5,17}$</p></li><li><p>强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间)：^(?=.<em>\d)(?=.</em>[a-z])(?=.*[A-Z]).{8,10}$</p></li><li><p>日期格式：^\d{4}-\d{1,2}-\d{1,2}</p></li><li><p>一年的12个月(01～09和1～12)：^(0?[1-9]|1[0-2])$</p></li><li><p>一个月的31天(01～09和1～31)：^((0?[1-9])|((1|2)[0-9])|30|31)$</p></li><li><p>钱的输入格式：</p></li><li><p>1.有四种钱的表示形式我们可以接受:”10000.00” 和 “10,000.00”, 和没有 “分” 的 “10000” 和 “10,000”：^[1-9][0-9]*$</p></li><li><p>2.这表示任意一个不以0开头的数字,但是,这也意味着一个字符”0”不通过,所以我们采用下面的形式：^(0|[1-9][0-9]*)$</p></li><li><p>3.一个0或者一个不以0开头的数字.我们还可以允许开头有一个负号：^(0|-?[1-9][0-9]*)$</p></li><li><p>4.这表示一个0或者一个可能为负的开头不为0的数字.让用户以0开头好了.把负号的也去掉,因为钱总不能是负的吧.下面我们要加的是说明可能的小数部分：^[0-9]+(.[0-9]+)?$</p></li><li><p>5.必须说明的是,小数点后面至少应该有1位数,所以”10.”是不通过的,但是 “10” 和 “10.2” 是通过的：^[0-9]+(.[0-9]{2})?$</p></li><li><p>6.这样我们规定小数点后面必须有两位,如果你认为太苛刻了,可以这样：^[0-9]+(.[0-9]{1,2})?$</p></li><li><p>7.这样就允许用户只写一位小数.下面我们该考虑数字中的逗号了,我们可以这样：^[0-9]{1,3}(,[0-9]{3})<em>(.[0-9]{1,2})?$</em></p></li><li><p><em>23 8.1到3个数字,后面跟着任意个 逗号+3个数字,逗号成为可选,而不是必须：^([0-9]+|[0-9]{1,3}(,[0-9]{3})</em>)(.[0-9]{1,2})?$</p></li><li><p>备注：这就是最终结果了,别忘了”+”可以用”*”替代如果你觉得空字符串也可以接受的话(奇怪,为什么?)最后,别忘了在用函数时去掉去掉那个反斜杠,一般的错误都在这里</p></li><li><p>xml文件：^([a-zA-Z]+-?)+[a-zA-Z0-9]+\.[x|X][m|M][l|L]$</p></li><li><p>中文字符的正则表达式：[\u4e00-\u9fa5]</p></li><li><p>双字节字符：[^\x00-\xff] (包括汉字在内，可以用来计算字符串的长度(一个双字节字符长度计2，ASCII字符计1))</p></li><li><p>空白行的正则表达式：\n\s*\r (可以用来删除空白行)</p></li><li><p>HTML标记的正则表达式：&lt;(\S*?)[^&gt;]<em>&gt;.</em>?&lt;/\1&gt;|&lt;.*? /&gt; (网上流传的版本太糟糕，上面这个也仅仅能部分，对于复杂的嵌套标记依旧无能为力)</p></li><li><p>首尾空白字符的正则表达式：^\s*|\s*$或(^\s*)|(\s*$) (可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式)</p></li><li><p>腾讯QQ号：[1-9][0-9]{4,} (腾讯QQ号从10000开始)</p></li><li><p>中国邮政编码：[1-9]\d{5}(?!\d) (中国邮政编码为6位数字)</p></li><li><p>IP地址：\d+.\d+.\d+.\d+ (提取IP地址时有用)</p></li><li><p>IP地址：((?:(?:25[0-5]|2[0-4]\d|[01]?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d?\d))</p></li></ol><h5 id="Example-1-1"><a href="#Example-1-1" class="headerlink" title="Example_1"></a>Example_1</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(<span class="string">&#x27;./qiushiLibs&#x27;</span>):</span><br><span class="line">        os.mkdir(<span class="string">&#x27;./qiushiLibs&#x27;</span>)</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    url = <span class="string">&#x27;https://www.qiushibaike.com/imgrank/page/&#123;pageNum&#125;/&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> pageNum <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">4</span>):</span><br><span class="line">        new_url = url.<span class="built_in">format</span>(pageNum=pageNum)</span><br><span class="line">        page_text = requests.get(url=url, headers=headers).text</span><br><span class="line">        ex = <span class="string">&#x27;&lt;div class=&quot;thumb&quot;&gt;.*?&lt;img src=&quot;(.*?)&quot; alt.*?&lt;/div&gt;&#x27;</span></span><br><span class="line">        img_src_list = re.findall(ex, page_text, re.S)</span><br><span class="line">        <span class="keyword">for</span> src_img <span class="keyword">in</span> img_src_list:</span><br><span class="line">            src_url = <span class="string">&#x27;https:&#x27;</span> + src_img</span><br><span class="line">            img_data = requests.get(url=src_url, headers=headers).content</span><br><span class="line">            img_name = src_url.split(<span class="string">&#x27;/&#x27;</span>)[-<span class="number">1</span>]</span><br><span class="line">            imgPath = <span class="string">&#x27;./qiushiLibs/&#x27;</span> + img_name</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(imgPath, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">                fp.write(img_data)</span><br><span class="line">                print(img_name, <span class="string">&#x27;down&#x27;</span>)</span><br><span class="line">    print(<span class="string">&#x27;all down&#x27;</span>)</span><br></pre></td></tr></table></figure><h4 id="bs4-仅python可用"><a href="#bs4-仅python可用" class="headerlink" title="bs4 - 仅python可用"></a>bs4 - 仅python可用</h4><ol><li><p>实例化一个beautifulsoup对象，并且将页面源码数据加载到该对象中</p><ol><li><p>将本地的html文档加载到对象中</p><ol><li><pre><code class="python">fp = open(&#39;./xxx.html&#39;, &#39;r&#39;, encoding=&#39;utf-8&#39;)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 将互联网上的源码加载到对象中</span><br><span class="line"></span><br><span class="line">   1. &#96;&#96;&#96;python</span><br><span class="line">      page_text &#x3D; response.text</span><br><span class="line">      soup &#x3D; beautifulsoup(page_text, &#39;lxml&#39;)</span><br></pre></td></tr></table></figure></code></pre></li></ol></li></ol></li><li><p>通过调用beautifulsoup对象中的相关属性或者方法进行标签定位和数据提取</p><ol><li>soup.tagName<ol><li>返回的是第一次出现的标签对应的内容</li></ol></li><li>soup.find - 定位<ol><li>soup.find(‘tagName’) = soup.tagName</li><li>soup.find(‘tagName’, class_/id/attr=’name’)</li><li>soup.find_all(‘tagName’)<ol><li>列表：返回所有符合标签要求的内容</li></ol></li></ol></li><li>soup.select<ol><li>soup.select(‘选择器’)<ol><li>返回一个列表</li></ol></li><li>层级选择器<ol><li>soup.select(‘.className &gt; ul &gt; li &gt; a’)<ol><li>‘&gt;’ : 一个层级</li></ol></li><li>soup.select(‘.className &gt; ul a’)<ol><li>‘空格’ ：多个层级</li></ol></li></ol></li></ol></li><li>获取标签之间的文本数据<ol><li>soup.tagName.text/get_text()<ol><li>获取所有之下的文本数据</li></ol></li><li>soup.tagName.string<ol><li>仅仅获取该标签下的文本数据</li></ol></li></ol></li><li>获取标签中的属性值<ol><li>soup.tagName[‘attrName’]</li></ol></li></ol></li></ol><h5 id="Example-1-2"><a href="#Example-1-2" class="headerlink" title="Example_1"></a>Example_1</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    url = <span class="string">&#x27;http://sanguo.5000yan.com/&#x27;</span></span><br><span class="line">    page_text = requests.get(url=url, headers=headers, timeout=<span class="number">10</span>)</span><br><span class="line">    <span class="comment"># 文本信息乱码解决</span></span><br><span class="line">    page_text.encoding = page_text.apparent_encoding</span><br><span class="line">    page_text = page_text.text</span><br><span class="line">    soup = BeautifulSoup(page_text, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">    li_list = soup.select(<span class="string">&#x27;.list &gt; ul &gt; li&#x27;</span>)</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./sanguo.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> li <span class="keyword">in</span> li_list:</span><br><span class="line">        title = li.a.string</span><br><span class="line">        detail_url = <span class="string">&#x27;http://sanguo.5000yan.com/&#x27;</span> + li.a[<span class="string">&#x27;href&#x27;</span>]</span><br><span class="line">        detail_page = requests.get(url=detail_url, headers=headers)</span><br><span class="line">        <span class="comment"># 文本信息乱码</span></span><br><span class="line">        detail_page.encoding = detail_page.apparent_encoding</span><br><span class="line">        detail_page = detail_page.text</span><br><span class="line">        detail_soup = BeautifulSoup(detail_page, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">        div_tag = detail_soup.find(<span class="string">&#x27;div&#x27;</span>, class_=<span class="string">&#x27;grap&#x27;</span>)</span><br><span class="line">        content = div_tag.text</span><br><span class="line">        fp.write(title + <span class="string">&#x27;:&#x27;</span> + content + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">        print(title, <span class="string">&#x27;down&#x27;</span>)</span><br></pre></td></tr></table></figure><h4 id="xpath"><a href="#xpath" class="headerlink" title="xpath"></a>xpath</h4><ol><li>实例化一个etree对象，且将要被解析的页面源码数据加载到该对象中<ol><li>from lxml import etree</li><li>本地html文档<ol><li>etree.parse(filePath)</li></ol></li><li>互联网上<ol><li>etree.HTML(‘page_text’)</li></ol></li></ol></li><li>调用etree对象中的xpath方法结合xpath表达式实现标签的定位和内容的捕获<ol><li>xpath(‘xpath表达式’) – 返回的是列表，里面是element对象<ol><li>标签定位 – 层级定位<ol><li>xpath(‘/html/body/div’) : ‘/‘ : 表示一个层级</li><li>xpath(‘/html//div’) : ‘//‘ : 表示多个层级</li><li>xpath(‘//div’) : ‘//‘ : 表示任意位置查找</li></ol></li><li>属性定位<ol><li>xpath(‘//div[@class=”className”]’)  : tag[@attrName=”attrValue”]</li></ol></li><li>索引定位<ol><li>xpath(‘//div[@class=”className”]/p[index]’) : 索引从1开始</li></ol></li><li>取文本值<ol><li>xpath(‘//div[@class=”className”]/p[index]/text()’)[0] : text()返回的仍然是列表<ol><li>/text() : 返回的是直系标签文本值</li><li>//text() : 返回的是下属所有标签文本值</li></ol></li></ol></li><li>取属性值<ol><li>/@attrName</li></ol></li></ol></li></ol></li></ol><h5 id="Example-1-文本"><a href="#Example-1-文本" class="headerlink" title="Example_1_文本"></a>Example_1_文本</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    url = <span class="string">&#x27;https://qxn.58.com/ershoufang/?utm_source=market&#x27;</span></span><br><span class="line">    page_text = requests.get(url=url, headers=headers).text</span><br><span class="line">    tree = etree.HTML(page_text)</span><br><span class="line">    div_list = tree.xpath(<span class="string">&#x27;//section[@class=&quot;list&quot;]/div&#x27;</span>)</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;58.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> div <span class="keyword">in</span> div_list:</span><br><span class="line">        title = div.xpath(<span class="string">&#x27;./a//div[@class=&quot;property-content-title&quot;]/h3/text()&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">        fp.write(title)</span><br><span class="line">        print(title + <span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure><h5 id="Example-2-属性值"><a href="#Example-2-属性值" class="headerlink" title="Example_2_属性值"></a>Example_2_属性值</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span>  etree</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    url = <span class="string">&#x27;http://pic.netbian.com/4kmeinv/index_&#123;pageNum&#125;.html&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> pageNum <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,<span class="number">101</span>):</span><br><span class="line">        url = url.<span class="built_in">format</span>(pageNum=pageNum)</span><br><span class="line">        response = requests.get(url=url, headers=headers)</span><br><span class="line">        <span class="comment"># 手动设置编码格式</span></span><br><span class="line">        <span class="comment"># response.encoding = &#x27;utf-8&#x27;</span></span><br><span class="line">        page_text = response.text</span><br><span class="line">        tree = etree.HTML(page_text)</span><br><span class="line">        li_list = tree.xpath(<span class="string">&#x27;//div[@class=&quot;slist&quot;]//li&#x27;</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(<span class="string">&#x27;./meinv&#x27;</span>):</span><br><span class="line">            os.mkdir(<span class="string">&#x27;./meinv&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> img <span class="keyword">in</span> li_list:</span><br><span class="line">            img_src = <span class="string">&#x27;http://pic.netbian.com/&#x27;</span> + img.xpath(<span class="string">&#x27;./a/img/@src&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">            img_title = img.xpath(<span class="string">&#x27;./a/img/@alt&#x27;</span>)[<span class="number">0</span>] + <span class="string">&#x27;.jpg&#x27;</span></span><br><span class="line">            <span class="comment"># 通用局部处理中文乱码解决方案</span></span><br><span class="line">            img_title = img_title.encode(<span class="string">&#x27;iso-8859-1&#x27;</span>).decode(<span class="string">&#x27;gbk&#x27;</span>)</span><br><span class="line">            <span class="comment"># print(img_title,img_src)</span></span><br><span class="line">            img_data = requests.get(url=img_src, headers=headers).content</span><br><span class="line">            img_path = <span class="string">&#x27;meinv/&#x27;</span> + img_title</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(img_path, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">                fp.write(img_data)</span><br><span class="line">                print(img_title,<span class="string">&#x27;down&#x27;</span>)</span><br></pre></td></tr></table></figure><h5 id="Example-3-条件表达式"><a href="#Example-3-条件表达式" class="headerlink" title="Example_3_条件表达式"></a>Example_3_条件表达式</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    url = <span class="string">&#x27;https://www.aqistudy.cn/historydata/&#x27;</span></span><br><span class="line">    page_text = requests.get(url=url, headers=headers).text</span><br><span class="line">    tree = etree.HTML(page_text)</span><br><span class="line">    all_city = []</span><br><span class="line">    <span class="comment"># 条件表达式</span></span><br><span class="line">    city_list = tree.xpath(<span class="string">&#x27;//div[@class=&quot;bottom&quot;]/ul/li/a | //div[@class=&quot;all&quot;]/div[@class=&quot;bottom&quot;]/ul/div[2]/li/a&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> city_list:</span><br><span class="line">        city_name = name.xpath(<span class="string">&#x27;./text()&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">        all_city.append(city_name)</span><br><span class="line">    print(all_city, <span class="built_in">len</span>(all_city))</span><br></pre></td></tr></table></figure><h5 id="Example-4"><a href="#Example-4" class="headerlink" title="Example_4"></a>Example_4</h5>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;基础&quot;&gt;&lt;a href=&quot;#基础&quot; class=&quot;headerlink&quot; title=&quot;基础&quot;&gt;&lt;/a&gt;基础&lt;/h1&gt;&lt;h2 id=&quot;分类&quot;&gt;&lt;a href=&quot;#分类&quot; class=&quot;headerlink&quot; title=&quot;分类&quot;&gt;&lt;/a&gt;分类&lt;/h2&gt;&lt;h3 id=&quot;使用场景&quot;&gt;&lt;a href=&quot;#使用场景&quot; class=&quot;headerlink&quot; title=&quot;使用场景&quot;&gt;&lt;/a&gt;使用场景&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;通用爬虫&lt;ol&gt;
-&lt;li&gt;抓取一整张页面&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;聚焦爬虫&lt;ol&gt;
-&lt;li&gt;抓取页面中特定的局部内容&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;增量式爬虫&lt;ol&gt;
-&lt;li&gt;检测网站中数据更新的数据&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;反爬机制&quot;&gt;&lt;a href=&quot;#反爬机制&quot; class=&quot;headerlink&quot; title=&quot;反爬机制&quot;&gt;&lt;/a&gt;反爬机制&lt;/h3&gt;&lt;h4 id=&quot;robots-txt&quot;&gt;&lt;a href=&quot;#robots-txt&quot; class=&quot;headerlink&quot; title=&quot;robots.txt&quot;&gt;&lt;/a&gt;robots.txt&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;规定网站中哪些能够爬取，哪些不能爬取。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/robots.txt&quot;&gt;https://www.zhihu.com/robots.txt&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;figure class=&quot;highlight text&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;User-agent: Googlebot&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Disallow: /appview/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Disallow: /login&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Disallow: /logout&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Disallow: /resetpassword&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Disallow: /terms&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Disallow: /search&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Allow: /search-special&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Disallow: /notifications&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Disallow: /settings&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Disallow: /inbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Disallow: /admin_inbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Disallow: /*?guide*&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&quot;UA检测&quot;&gt;&lt;a href=&quot;#UA检测&quot; class=&quot;headerlink&quot; title=&quot;UA检测&quot;&gt;&lt;/a&gt;UA检测&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;UA：User-Agent：请求载体的身份标识&lt;/li&gt;
-&lt;li&gt;门户网站的服务器检测身份标识，不是基于浏览器则拒绝&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;反反爬机制&quot;&gt;&lt;a href=&quot;#反反爬机制&quot; class=&quot;headerlink&quot; title=&quot;反反爬机制&quot;&gt;&lt;/a&gt;反反爬机制&lt;/h3&gt;&lt;h4 id=&quot;UA伪装&quot;&gt;&lt;a href=&quot;#UA伪装&quot; class=&quot;headerlink&quot; title=&quot;UA伪装&quot;&gt;&lt;/a&gt;UA伪装&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;requests中写入头信息&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;http协议&quot;&gt;&lt;a href=&quot;#http协议&quot; class=&quot;headerlink&quot; title=&quot;http协议&quot;&gt;&lt;/a&gt;http协议&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;数据交互形式&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&quot;常用请求头信息&quot;&gt;&lt;a href=&quot;#常用请求头信息&quot; class=&quot;headerlink&quot; title=&quot;常用请求头信息&quot;&gt;&lt;/a&gt;常用请求头信息&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;User-Agent：请求载体的身份标识&lt;/li&gt;
-&lt;li&gt;Connection: 请求完毕后，是断开连接还是保持连接&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&quot;常用响应头信息&quot;&gt;&lt;a href=&quot;#常用响应头信息&quot; class=&quot;headerlink&quot; title=&quot;常用响应头信息&quot;&gt;&lt;/a&gt;常用响应头信息&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;Content -Type：服务器响应回客户端的数据类型&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;https协议&quot;&gt;&lt;a href=&quot;#https协议&quot; class=&quot;headerlink&quot; title=&quot;https协议&quot;&gt;&lt;/a&gt;https协议&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;安全的超文本传输协议&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;加密方式&quot;&gt;&lt;a href=&quot;#加密方式&quot; class=&quot;headerlink&quot; title=&quot;加密方式&quot;&gt;&lt;/a&gt;加密方式&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;对称秘钥加密&lt;ol&gt;
-&lt;li&gt;公钥&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;非对称秘钥加密&lt;ol&gt;
-&lt;li&gt;私钥&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;证书秘钥加密&lt;ol&gt;
-&lt;li&gt;第三方机构签名&lt;/li&gt;
-&lt;li&gt;https&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;</summary>
+    <title>论人类认知能力</title>
+    <link href="http://whispering.xyz/2021/04/18/%E8%AE%BA%E4%BA%BA%E7%B1%BB%E8%AE%A4%E7%9F%A5%E8%83%BD%E5%8A%9B/"/>
+    <id>http://whispering.xyz/2021/04/18/%E8%AE%BA%E4%BA%BA%E7%B1%BB%E8%AE%A4%E7%9F%A5%E8%83%BD%E5%8A%9B/</id>
+    <published>2021-04-18T09:09:52.000Z</published>
+    <updated>2021-04-18T09:12:52.424Z</updated>
     
     
     
-    <category term="Python" scheme="http://whispering.xyz/categories/Python/"/>
     
+    <category term="认知科学" scheme="http://whispering.xyz/categories/%E8%AE%A4%E7%9F%A5%E7%A7%91%E5%AD%A6/"/>
     
-    <category term="工具" scheme="http://whispering.xyz/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论锤子的世界</title>
-    <link href="http://whispering.xyz/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
-    <id>http://whispering.xyz/2020/11/21/Hexo%E5%85%A5%E9%97%A8%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
-    <published>2020-11-21T14:09:52.000Z</published>
-    <updated>2020-11-23T08:11:18.340Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="锤子的特点"><a href="#锤子的特点" class="headerlink" title="锤子的特点"></a>锤子的特点</h1><hr><a id="more"></a><hr>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;锤子的特点&quot;&gt;&lt;a href=&quot;#锤子的特点&quot; class=&quot;headerlink&quot; title=&quot;锤子的特点&quot;&gt;&lt;/a&gt;锤子的特点&lt;/h1&gt;&lt;hr&gt;</summary>
-    
-    
-    
-    <category term="思考" scheme="http://whispering.xyz/categories/%E6%80%9D%E8%80%83/"/>
-    
-    
-    <category term="哲学" scheme="http://whispering.xyz/tags/%E5%93%B2%E5%AD%A6/"/>
-    
-    <category term="思考" scheme="http://whispering.xyz/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
