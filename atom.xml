@@ -46,7 +46,7 @@
     <link href="http://whispering.xyz/2021/04/17/%E6%B1%82100%E4%BB%A5%E5%86%85%E6%89%80%E6%9C%89%E8%B4%A8%E6%95%B0/"/>
     <id>http://whispering.xyz/2021/04/17/%E6%B1%82100%E4%BB%A5%E5%86%85%E6%89%80%E6%9C%89%E8%B4%A8%E6%95%B0/</id>
     <published>2021-04-16T16:33:15.000Z</published>
-    <updated>2021-04-18T09:25:30.957Z</updated>
+    <updated>2021-05-10T16:17:56.094Z</updated>
     
     <content type="html"><![CDATA[<p>所有代码用Jave做示例</p><ol><li><p>所谓质数，即是除1和其本身外不能被其他数整除</p><ol><li><p>首先需要循环遍历所有数字，逐个做判断，根据其定义自然有</p><ol><li><pre><code class="java">class PrimeNumber &#123;    public static void main(String[] args)&#123;        // FLag        boolean isFlag = true;        for(int i = 2;i &lt; 100;i++)&#123;            for(int j = 2;j &lt; 2;j++)&#123;                if(i % j == 0)&#123;                    isFlag = false;                &#125;            &#125;            if(isFlag == true)&#123;                System.Out.println(i);            &#125;        //重置Flag            isFlag = true    &#125;&#125;</code></pre></li></ol></li><li><p>时间复杂度分析</p><ol><li></li></ol></li></ol></li></ol>]]></content>
     
@@ -67,7 +67,7 @@
     <category term="算法" scheme="http://whispering.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="-算法搜索" scheme="http://whispering.xyz/tags/%E7%AE%97%E6%B3%95%E6%90%9C%E7%B4%A2/"/>
+    <category term="搜索" scheme="http://whispering.xyz/tags/%E6%90%9C%E7%B4%A2/"/>
     
   </entry>
   
