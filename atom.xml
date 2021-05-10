@@ -6,7 +6,7 @@
   <link href="http://whispering.xyz/atom.xml" rel="self"/>
   
   <link href="http://whispering.xyz/"/>
-  <updated>2021-04-23T01:45:22.726Z</updated>
+  <updated>2021-05-10T16:10:34.506Z</updated>
   <id>http://whispering.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode88</title>
+    <link href="http://whispering.xyz/2021/05/11/LeetCode88/"/>
+    <id>http://whispering.xyz/2021/05/11/LeetCode88/</id>
+    <published>2021-05-10T16:09:16.000Z</published>
+    <updated>2021-05-10T16:10:34.506Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="LeetCode88"><a href="#LeetCode88" class="headerlink" title="LeetCode88"></a>LeetCode88</h1><ol><li><p>合并两个有序数组num1和nums2，将nums2合并到nums1中，使得nums1同样是有序数组</p><ol><li>假设nums1的元素数量为m，nums2的元素数量为n</li></ol></li><li><p>解题思路</p><ol><li><p>创建新的数组，将排序好的数组赋值给num1，新数组的空间大小为(m+n)</p><ol><li><p>已知两个数组有序，则类似于归并排序</p><ol><li><p>关键在于其中一个数组的元素抽取完之后，将另一个没有被抽取完元素的数组的剩余值直接赋值给新数组</p></li><li><p>代码如下：</p></li><li><pre><code class="java">class SolutionEightyEight &#123;    public void merge(int[] nums1, int m, int[] nums2, int n) &#123;        int[] nums3 = new int[m + n];        int indexnums1 = 0;        int indexnums2 = 0;        for (int i = 0; i &lt; m + n; i++) &#123;            if (indexnums1 == m) &#123;                nums3[i] = nums2[indexnums2++];            &#125; else if (indexnums2 == n) &#123;                nums3[i] = nums1[indexnums1++];            &#125; else if (indexnums1 &lt; m || indexnums2 &lt; n) &#123;                if (nums1[indexnums1] &lt; nums2[indexnums2]) &#123;                    nums3[i] = nums1[indexnums1++];                &#125; else if (nums2[indexnums2] &lt;= nums1[indexnums1])&#123;                    nums3[i] = nums2[indexnums2++];                &#125;            &#125;        &#125;        for (int j = 0; j &lt; m + n; j++) &#123;            nums1[j] = nums3[j];        &#125;    &#125;&#125;</code></pre></li></ol></li></ol></li></ol></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;LeetCode88&quot;&gt;&lt;a href=&quot;#LeetCode88&quot; class=&quot;headerlink&quot; title=&quot;LeetCode88&quot;&gt;&lt;/a&gt;LeetCode88&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;合并两个有序数组num1和nums2，将nums2合并到n</summary>
+      
+    
+    
+    
+    <category term="LeetCode" scheme="http://whispering.xyz/categories/LeetCode/"/>
+    
+    
+    <category term="Arrays" scheme="http://whispering.xyz/tags/Arrays/"/>
+    
+  </entry>
   
   <entry>
     <title>词-张先“三影”</title>

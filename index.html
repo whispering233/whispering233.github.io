@@ -216,20 +216,20 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -270,6 +270,169 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://whispering.xyz/2021/05/11/LeetCode88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/sword.gif">
+      <meta itemprop="name" content="Whispering">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Whispering's world">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/LeetCode88/" class="post-title-link" itemprop="url">LeetCode88</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-11 00:09:16" itemprop="dateCreated datePublished" datetime="2021-05-11T00:09:16+08:00">2021-05-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2021/05/11/LeetCode88/" class="post-meta-item leancloud_visitors" data-flag-title="LeetCode88" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/05/11/LeetCode88/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/11/LeetCode88/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>778</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="LeetCode88"><a href="#LeetCode88" class="headerlink" title="LeetCode88"></a>LeetCode88</h1><ol>
+<li><p>合并两个有序数组num1和nums2，将nums2合并到nums1中，使得nums1同样是有序数组</p>
+<ol>
+<li>假设nums1的元素数量为m，nums2的元素数量为n</li>
+</ol>
+</li>
+<li><p>解题思路</p>
+<ol>
+<li><p>创建新的数组，将排序好的数组赋值给num1，新数组的空间大小为(m+n)</p>
+<ol>
+<li><p>已知两个数组有序，则类似于归并排序</p>
+<ol>
+<li><p>关键在于其中一个数组的元素抽取完之后，将另一个没有被抽取完元素的数组的剩余值直接赋值给新数组</p>
+</li>
+<li><p>代码如下：</p>
+</li>
+<li><pre><code class="java">class SolutionEightyEight &#123;
+    public void merge(int[] nums1, int m, int[] nums2, int n) &#123;
+        int[] nums3 = new int[m + n];
+        int indexnums1 = 0;
+        int indexnums2 = 0;
+        for (int i = 0; i &lt; m + n; i++) &#123;
+            if (indexnums1 == m) &#123;
+                nums3[i] = nums2[indexnums2++];
+            &#125; else if (indexnums2 == n) &#123;
+                nums3[i] = nums1[indexnums1++];
+            &#125; else if (indexnums1 &lt; m || indexnums2 &lt; n) &#123;
+                if (nums1[indexnums1] &lt; nums2[indexnums2]) &#123;
+                    nums3[i] = nums1[indexnums1++];
+                &#125; else if (nums2[indexnums2] &lt;= nums1[indexnums1])&#123;
+                    nums3[i] = nums2[indexnums2++];
+                &#125;
+            &#125;
+        &#125;
+        for (int j = 0; j &lt; m + n; j++) &#123;
+            nums1[j] = nums3[j];
+        &#125;
+    &#125;
+&#125;</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+      <div>
+          
+      </div>
+    </div>
+
+    
+    
+    
+
+    <div>
+        
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1533,13 +1696,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">14k</span>
+    <span title="站点总字数">15k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">13 分钟</span>
+    <span title="站点阅读时长">14 分钟</span>
   </span>
 </div>
 

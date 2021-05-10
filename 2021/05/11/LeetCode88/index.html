@@ -23,18 +23,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"whispering.xyz","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":{"active":"valine"},"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false}};
   </script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://whispering.xyz/about/index.html">
+<meta name="description" content="LeetCode88 合并两个有序数组num1和nums2，将nums2合并到nums1中，使得nums1同样是有序数组  假设nums1的元素数量为m，nums2的元素数量为n   解题思路  创建新的数组，将排序好的数组赋值给num1，新数组的空间大小为(m+n)  已知两个数组有序，则类似于归并排序  关键在于其中一个数组的元素抽取完之后，将另一个没有被抽取完元素的数组的剩余值直接赋值给新数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode88">
+<meta property="og:url" content="http://whispering.xyz/2021/05/11/LeetCode88/index.html">
 <meta property="og:site_name" content="Whispering&#39;s world">
+<meta property="og:description" content="LeetCode88 合并两个有序数组num1和nums2，将nums2合并到nums1中，使得nums1同样是有序数组  假设nums1的元素数量为m，nums2的元素数量为n   解题思路  创建新的数组，将排序好的数组赋值给num1，新数组的空间大小为(m+n)  已知两个数组有序，则类似于归并排序  关键在于其中一个数组的元素抽取完之后，将另一个没有被抽取完元素的数组的剩余值直接赋值给新数">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-20T13:15:06.000Z">
-<meta property="article:modified_time" content="2020-11-20T13:15:06.119Z">
+<meta property="article:published_time" content="2021-05-10T16:09:16.000Z">
+<meta property="article:modified_time" content="2021-05-10T16:10:34.506Z">
 <meta property="article:author" content="Whispering">
+<meta property="article:tag" content="Arrays">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://whispering.xyz/about/">
+<link rel="canonical" href="http://whispering.xyz/2021/05/11/LeetCode88/">
 
 
 <script class="page-configurations">
@@ -42,12 +45,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
-<title>about | Whispering's world
-</title>
+<title>LeetCode88 | Whispering's world</title>
   
 
 
@@ -192,7 +194,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -205,6 +207,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#LeetCode88"><span class="nav-number">1.</span> <span class="nav-text">LeetCode88</span></a></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -272,36 +275,189 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
   
   
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://whispering.xyz/2021/05/11/LeetCode88/">
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/sword.gif">
+      <meta itemprop="name" content="Whispering">
+      <meta itemprop="description" content="">
+    </span>
 
-<h1 class="post-title" itemprop="name headline">about
-</h1>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Whispering's world">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LeetCode88
+        </h1>
 
-<div class="post-meta-container">
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-11 00:09:16" itemprop="dateCreated datePublished" datetime="2021-05-11T00:09:16+08:00">2021-05-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2021/05/11/LeetCode88/" class="post-meta-item leancloud_visitors" data-flag-title="LeetCode88" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/05/11/LeetCode88/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/11/LeetCode88/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>778</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="LeetCode88"><a href="#LeetCode88" class="headerlink" title="LeetCode88"></a>LeetCode88</h1><ol>
+<li><p>合并两个有序数组num1和nums2，将nums2合并到nums1中，使得nums1同样是有序数组</p>
+<ol>
+<li>假设nums1的元素数量为m，nums2的元素数量为n</li>
+</ol>
+</li>
+<li><p>解题思路</p>
+<ol>
+<li><p>创建新的数组，将排序好的数组赋值给num1，新数组的空间大小为(m+n)</p>
+<ol>
+<li><p>已知两个数组有序，则类似于归并排序</p>
+<ol>
+<li><p>关键在于其中一个数组的元素抽取完之后，将另一个没有被抽取完元素的数组的剩余值直接赋值给新数组</p>
+</li>
+<li><p>代码如下：</p>
+</li>
+<li><pre><code class="java">class SolutionEightyEight &#123;
+    public void merge(int[] nums1, int m, int[] nums2, int n) &#123;
+        int[] nums3 = new int[m + n];
+        int indexnums1 = 0;
+        int indexnums2 = 0;
+        for (int i = 0; i &lt; m + n; i++) &#123;
+            if (indexnums1 == m) &#123;
+                nums3[i] = nums2[indexnums2++];
+            &#125; else if (indexnums2 == n) &#123;
+                nums3[i] = nums1[indexnums1++];
+            &#125; else if (indexnums1 &lt; m || indexnums2 &lt; n) &#123;
+                if (nums1[indexnums1] &lt; nums2[indexnums2]) &#123;
+                    nums3[i] = nums1[indexnums1++];
+                &#125; else if (nums2[indexnums2] &lt;= nums1[indexnums1])&#123;
+                    nums3[i] = nums2[indexnums2++];
+                &#125;
+            &#125;
+        &#125;
+        for (int j = 0; j &lt; m + n; j++) &#123;
+            nums1[j] = nums3[j];
+        &#125;
+    &#125;
+&#125;</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
+      <div>
+          
+              <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
           
       </div>
-      
-      
-      
     </div>
 
     
     
+    
+
+    <div>
+        
+            
+
+        
+    </div>
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Arrays/" rel="tag"><i class="fas fa-tag"></i> Arrays</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/23/%E8%AF%8D-%E5%BC%A0%E5%85%88%E2%80%9C%E4%B8%89%E5%BD%B1%E2%80%9D/" rel="prev" title="词-张先“三影”">
+                  <i class="fa fa-chevron-left"></i> 词-张先“三影”
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
     <div class="comments" id="valine-comments"></div>
@@ -421,7 +577,7 @@ NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
     new Valine(Object.assign({"enable":true,"appId":"6m7dtd8dHwGIO0bNxeAoQCA2-MdYXbMMI","appKey":"y8zdSJiWAx5YSoG7tbTsTsb1","serverURLs":null,"placeholder":"输入你的评论\n昵称为必填项目，输入QQ号可以直接获取用户名和头像","avatar":"mp","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":true,"enableQQ":true,"requiredFields":["nick"]}, {
       el: '#valine-comments',
-      path: "/about/",
+      path: "/2021/05/11/LeetCode88/",
       serverURLs: "https://6m7dtd8d.api.lncldglobal.com"
     }));
   }, window.Valine);
