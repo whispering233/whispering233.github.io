@@ -686,6 +686,35 @@
       </tags>
   </entry>
   <entry>
+    <title>LeetCode34</title>
+    <url>/2021/05/14/LeetCode34/</url>
+    <content><![CDATA[<h1 id="LeetCode34"><a href="#LeetCode34" class="headerlink" title="LeetCode34"></a>LeetCode34</h1><ol>
+<li>给定升序排列的整数数组nums，和目标值target</li>
+<li>找出目标值的在数组中的开始位置和结束位置</li>
+</ol>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="暴力搜索"><a href="#暴力搜索" class="headerlink" title="暴力搜索"></a>暴力搜索</h3><ol>
+<li>解法略</li>
+</ol>
+<h3 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h3><ol>
+<li>此处使用二分法的特殊之处在于<ol>
+<li>不是找到目标值后return mid</li>
+</ol>
+</li>
+<li>而是使得左右指针抵达目标值“区间”边界<ol>
+<li>返回左右指针</li>
+</ol>
+</li>
+</ol>
+<h4 id="单指针"><a href="#单指针" class="headerlink" title="单指针"></a>单指针</h4><p>此法需要调两次方法，得到两个指针</p>
+<h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4>]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>Arrays</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>about</title>
     <url>/about/index.html</url>
     <content><![CDATA[]]></content>
