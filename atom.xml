@@ -184,61 +184,15 @@
     <link href="http://whispering.xyz/2021/04/16/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://whispering.xyz/2021/04/16/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
     <published>2021-04-16T15:55:50.000Z</published>
-    <updated>2021-05-13T16:47:10.151Z</updated>
+    <updated>2021-05-13T16:50:32.846Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li>npm install hexo -g<ol><li>安装</li></ol></li><li>npm update hexo -g<ol><li>升级</li></ol></li><li>hexo init<ol><li>初始化</li></ol></li></ol><h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ol><li>hexo new page  &lt;title&gt; ; hexo n</li><li>hexo new post &lt;title&gt;<ol><li>page 与 post 的区别<ol><li>post指文章、日志，会按时间顺序排列在博客上</li><li>page指页面，不受时间规则影响，内容很少改变</li></ol></li></ol></li></ol><h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><ol><li>hexo generate ; hexo g<ol><li>生成静态页面至public目录</li></ol></li><li>hexo server<ol><li>开启预览访问端口</li></ol></li><li>hexo deploy ; hexo d<ol><li>部署到服务器</li></ol></li><li>hexo d -g<ol><li>合并使用</li></ol></li></ol><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol><li><p>hexo clean</p><ol><li>清除缓存</li></ol></li><li><p>‘<a id="more"></a>‘<br> 2.1 只显示之前的内容</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li>npm install hexo -g<ol><li>安装</li></ol></li><li>npm update hexo -g<ol><li>升级</li></ol></li><li>hexo init<ol><li>初始化</li></ol></li></ol><h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ol><li>hexo new page  &lt;title&gt; ; hexo n</li><li>hexo new post &lt;title&gt;<ol><li>page 与 post 的区别<ol><li>post指文章、日志，会按时间顺序排列在博客上</li><li>page指页面，不受时间规则影响，内容很少改变</li></ol></li></ol></li></ol><h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><ol><li>hexo generate ; hexo g<ol><li>生成静态页面至public目录</li></ol></li><li>hexo server<ol><li>开启预览访问端口</li></ol></li><li>hexo deploy ; hexo d<ol><li>部署到服务器</li></ol></li><li>hexo d -g<ol><li>合并使用</li></ol></li></ol><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol><li><p>hexo clean</p><ol><li>清除缓存</li></ol></li></ol>]]></content>
     
     
-    <summary type="html">&lt;h1 id=&quot;Hexo-常用命令&quot;&gt;&lt;a href=&quot;#Hexo-常用命令&quot; class=&quot;headerlink&quot; title=&quot;Hexo 常用命令&quot;&gt;&lt;/a&gt;Hexo 常用命令&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;npm install hexo -g&lt;ol&gt;
-&lt;li&gt;安装&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;npm update hexo -g&lt;ol&gt;
-&lt;li&gt;升级&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;hexo init&lt;ol&gt;
-&lt;li&gt;初始化&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;新建文章&quot;&gt;&lt;a href=&quot;#新建文章&quot; class=&quot;headerlink&quot; title=&quot;新建文章&quot;&gt;&lt;/a&gt;新建文章&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;hexo new page  &amp;lt;title&amp;gt; ; hexo n&lt;/li&gt;
-&lt;li&gt;hexo new post &amp;lt;title&amp;gt;&lt;ol&gt;
-&lt;li&gt;page 与 post 的区别&lt;ol&gt;
-&lt;li&gt;post指文章、日志，会按时间顺序排列在博客上&lt;/li&gt;
-&lt;li&gt;page指页面，不受时间规则影响，内容很少改变&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;发布&quot;&gt;&lt;a href=&quot;#发布&quot; class=&quot;headerlink&quot; title=&quot;发布&quot;&gt;&lt;/a&gt;发布&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;hexo generate ; hexo g&lt;ol&gt;
-&lt;li&gt;生成静态页面至public目录&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;hexo server&lt;ol&gt;
-&lt;li&gt;开启预览访问端口&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;hexo deploy ; hexo d&lt;ol&gt;
-&lt;li&gt;部署到服务器&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;hexo d -g&lt;ol&gt;
-&lt;li&gt;合并使用&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;其他&quot;&gt;&lt;a href=&quot;#其他&quot; class=&quot;headerlink&quot; title=&quot;其他&quot;&gt;&lt;/a&gt;其他&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;hexo clean&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;清除缓存&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;‘</summary>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Hexo-常用命令&quot;&gt;&lt;a href=&quot;#Hexo-常用命令&quot; class=&quot;headerlink&quot; title=&quot;Hexo 常用命令&quot;&gt;&lt;/a&gt;Hexo 常用命令&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; </summary>
+      
     
     
     
