@@ -379,8 +379,14 @@
 </ol>
 </li>
 </ol>
-<h4 id="单指针"><a href="#单指针" class="headerlink" title="单指针"></a>单指针</h4><p>此法需要调两次方法，得到两个指针</p>
-<h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/14/LeetCode34/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
       <div>
           
@@ -546,86 +552,15 @@
 </li>
 </ol>
 </li>
-<li><p>实现代码如下：</p>
-<ol>
-<li><pre><code class="java">public double findMedianSortedArraysHalf(int[] nums1, int[] nums2) &#123;
-        int length1 = nums1.length, length2 = nums2.length;
-        int totalLength = length1 + length2;
-        if (totalLength % 2 == 1) &#123;
-            int midIndex = totalLength / 2;
-            return getKthElement(nums1, nums2, midIndex + 1);
-        &#125; else &#123;
-            int midIndex1 = totalLength / 2 - 1, midIndex2 = totalLength / 2;
-            return (getKthElement(nums1, nums2, midIndex1 + 1) + getKthElement(nums1, nums2, midIndex2 + 1)) / 2.0;
-        &#125;
-    &#125;
-
-    public int getKthElement(int[] nums1, int[] nums2, int k) &#123;
-        int length1 = nums1.length, length2 = nums2.length;
-        int index1 = 0, index2 = 0;
-        while (true) &#123;
-            // 边界情况
-            if (index1 == length1) &#123;
-                return nums2[index2 + k - 1];
-            &#125;
-            if (index2 == length2) &#123;
-                return nums1[index1 + k - 1];
-            &#125;
-            if (k == 1) &#123;
-                return Math.min(nums1[index1], nums2[index2]);
-            &#125;
-            int half = k / 2;
-//            所以在这里进行了最小值判断
-//            但在这里只是得到了新的索引值，而原数组的索引值缺失
-//            所以如果元素数量偶数时，要调两次
-            int newIndex1 = Math.min(index1 + half, length1) - 1;
-            int newIndex2 = Math.min(index2 + half, length2) - 1;
-//            如果k/2越界时，即length1远小于length2，此时k/2可能大于length1
-//            此时第一次循环就要先选取较小长度数组的最后一个元素，若最后一个元素仍小于另一个数组的话，
-//            则不能直接减去k/2个元素，而是要按照相应的元素数量进行去除
-//            若最后一个元素较大，则正常进行循环，因为k值只在第一次给出，后续会不断更新
-            int pivot1 = nums1[newIndex1], pivot2 = nums2[newIndex2];
-            if (pivot1 &lt;= pivot2) &#123;
-//                index现在还是0
-//                减去绝对不是中位数的前k/2个数
-//                现在只需要找到剩下的更新过的第k个数
-
-                k -= (newIndex1 - index1 + 1);
-//                指针移向下一个元素,看做新的数组再一次进行循环
-//                当k=1时, 指向两个数组中较小一个
-                index1 = newIndex1 + 1;
-            &#125; else &#123;
-                k -= (newIndex2 - index2 + 1);
-                index2 = newIndex2 + 1;
-            &#125;
-        &#125;
-
-//        作者：LeetCode-Solution
-//        链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-s-114/
-//        来源：力扣（LeetCode）
-//        著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-    &#125;</code></pre>
-</li>
 </ol>
-</li>
-<li><p>代码分析</p>
-<ol>
-<li>时间复杂度<ol>
-<li><em>O</em>(log(<em>m</em>+<em>n</em>))</li>
-</ol>
-</li>
-<li>空间复杂度<ol>
-<li>O(1)</li>
-</ol>
-</li>
-<li>其他<ol>
-<li>且当m+n是偶数时，需要调两次方法</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/12/LeetCode4/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
       <div>
           
@@ -1036,7 +971,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>281</span>
+      <span>286</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1103,7 +1038,7 @@
 <li>清除缓存</li>
 </ol>
 </li>
-<li>
+<li><p>‘
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/04/16/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#more" rel="contents">

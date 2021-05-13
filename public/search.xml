@@ -52,11 +52,7 @@
 <li>清除缓存</li>
 </ol>
 </li>
-<li><a id="more"></a>
-
-<ol>
-<li>只显示之前的内容</li>
-</ol>
+<li><p>‘<a id="more"></a>‘<br> 2.1 只显示之前的内容</p>
 </li>
 </ol>
 ]]></content>
@@ -598,6 +594,10 @@
 </li>
 </ol>
 </li>
+</ol>
+<a id="more"></a>
+
+<ol start="4">
 <li><p>实现代码如下：</p>
 <ol>
 <li><pre><code class="java">public double findMedianSortedArraysHalf(int[] nums1, int[] nums2) &#123;
@@ -705,6 +705,8 @@
 </ol>
 </li>
 </ol>
+<a id="more"></a>
+
 <h4 id="单指针"><a href="#单指针" class="headerlink" title="单指针"></a>单指针</h4><p>此法需要调两次方法，得到两个指针</p>
 <h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4>]]></content>
       <categories>
