@@ -593,8 +593,6 @@
 </ol>
 </li>
 </ol>
-<a id="more"></a>
-
 <ol start="4">
 <li><p>实现代码如下：</p>
 <ol>
@@ -703,10 +701,33 @@
 </ol>
 </li>
 </ol>
-<a id="more"></a>
-
 <h4 id="单指针"><a href="#单指针" class="headerlink" title="单指针"></a>单指针</h4><p>此法需要调两次方法，得到两个指针</p>
 <h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4>]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>Arrays</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LeetCode41</title>
+    <url>/2021/05/14/LeetCode41/</url>
+    <content><![CDATA[<h1 id="LeetCode41"><a href="#LeetCode41" class="headerlink" title="LeetCode41"></a>LeetCode41</h1><p>给定未排序的整数数组nums，找出其中没有出现过的最小整数</p>
+<ol>
+<li>首先，数组本身没有规律<ol>
+<li>若完全是自然数组</li>
+<li>直接可以找出</li>
+</ol>
+</li>
+<li>关键在于如何调整数组元素，使其表达出一定的规律<ol>
+<li>索引和数值之间存在联系，呈现一一对应</li>
+<li>则根据索引与数值之间不是一一对应关系时</li>
+<li>即可判断此索引位置缺失</li>
+</ol>
+</li>
+</ol>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="调整数组元素"><a href="#调整数组元素" class="headerlink" title="调整数组元素"></a>调整数组元素</h3>]]></content>
       <categories>
         <category>LeetCode</category>
       </categories>

@@ -23,16 +23,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"whispering.xyz","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":{"active":"valine"},"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false}};
   </script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="Whispering&#39;s world">
-<meta property="og:url" content="http://whispering.xyz/archives/2021/index.html">
+<meta name="description" content="LeetCode41给定未排序的整数数组nums，找出其中没有出现过的最小整数  首先，数组本身没有规律 若完全是自然数组 直接可以找出   关键在于如何调整数组元素，使其表达出一定的规律 索引和数值之间存在联系，呈现一一对应 则根据索引与数值之间不是一一对应关系时 即可判断此索引位置缺失    解题思路调整数组元素">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode41">
+<meta property="og:url" content="http://whispering.xyz/2021/05/14/LeetCode41/index.html">
 <meta property="og:site_name" content="Whispering&#39;s world">
+<meta property="og:description" content="LeetCode41给定未排序的整数数组nums，找出其中没有出现过的最小整数  首先，数组本身没有规律 若完全是自然数组 直接可以找出   关键在于如何调整数组元素，使其表达出一定的规律 索引和数值之间存在联系，呈现一一对应 则根据索引与数值之间不是一一对应关系时 即可判断此索引位置缺失    解题思路调整数组元素">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-14T13:16:04.000Z">
+<meta property="article:modified_time" content="2021-05-14T13:16:40.005Z">
 <meta property="article:author" content="Whispering">
+<meta property="article:tag" content="Arrays">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://whispering.xyz/archives/2021/">
+<link rel="canonical" href="http://whispering.xyz/2021/05/14/LeetCode41/">
 
 
 <script class="page-configurations">
@@ -40,11 +45,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
-<title>归档 | Whispering's world</title>
+<title>LeetCode41 | Whispering's world</title>
   
 
 
@@ -189,7 +194,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -202,6 +207,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#LeetCode41"><span class="nav-number">1.</span> <span class="nav-text">LeetCode41</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="nav-number">1.1.</span> <span class="nav-text">解题思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.1.</span> <span class="nav-text">调整数组元素</span></a></li></ol></li></ol></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -269,170 +275,159 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 7 篇日志。 继续努力。</span>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://whispering.xyz/2021/05/14/LeetCode41/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/sword.gif">
+      <meta itemprop="name" content="Whispering">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Whispering's world">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LeetCode41
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-14 21:16:04" itemprop="dateCreated datePublished" datetime="2021-05-14T21:16:04+08:00">2021-05-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2021/05/14/LeetCode41/" class="post-meta-item leancloud_visitors" data-flag-title="LeetCode41" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/05/14/LeetCode41/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/14/LeetCode41/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
       </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>145</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="LeetCode41"><a href="#LeetCode41" class="headerlink" title="LeetCode41"></a>LeetCode41</h1><p>给定未排序的整数数组nums，找出其中没有出现过的最小整数</p>
+<ol>
+<li>首先，数组本身没有规律<ol>
+<li>若完全是自然数组</li>
+<li>直接可以找出</li>
+</ol>
+</li>
+<li>关键在于如何调整数组元素，使其表达出一定的规律<ol>
+<li>索引和数值之间存在联系，呈现一一对应</li>
+<li>则根据索引与数值之间不是一一对应关系时</li>
+<li>即可判断此索引位置缺失</li>
+</ol>
+</li>
+</ol>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="调整数组元素"><a href="#调整数组元素" class="headerlink" title="调整数组元素"></a>调整数组元素</h3>
+      <div>
+          
+              <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
+          
+      </div>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-05-14T21:16:04+08:00"
-              content="2021-05-14">
-          05-14
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/14/LeetCode41/" itemprop="url">
-            <span itemprop="name">LeetCode41</span>
-          </a>
-      </div>
+    <div>
+        
+            
 
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-05-14T00:41:41+08:00"
-              content="2021-05-14">
-          05-14
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/14/LeetCode34/" itemprop="url">
-            <span itemprop="name">LeetCode34</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-05-12T00:38:49+08:00"
-              content="2021-05-12">
-          05-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/12/LeetCode4/" itemprop="url">
-            <span itemprop="name">LeetCode4</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-05-11T00:09:16+08:00"
-              content="2021-05-11">
-          05-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/05/11/LeetCode88/" itemprop="url">
-            <span itemprop="name">LeetCode88</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-17T00:33:15+08:00"
-              content="2021-04-17">
-          04-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/17/%E6%B1%82100%E4%BB%A5%E5%86%85%E6%89%80%E6%9C%89%E8%B4%A8%E6%95%B0/" itemprop="url">
-            <span itemprop="name">求100以内所有质数</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-04-16T23:55:50+08:00"
-              content="2021-04-16">
-          04-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/04/16/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" itemprop="url">
-            <span itemprop="name">Hexo常用命令</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-03-31T20:50:32+08:00"
-              content="2021-03-31">
-          03-31
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/31/%E7%88%AC%E8%99%AB/" itemprop="url">
-            <span itemprop="name">爬虫教程</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-
+        
     </div>
-  </div>
-  
-  
-  
 
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Arrays/" rel="tag"><i class="fas fa-tag"></i> Arrays</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/14/LeetCode34/" rel="prev" title="LeetCode34">
+                  <i class="fa fa-chevron-left"></i> LeetCode34
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -549,7 +544,7 @@ NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
     new Valine(Object.assign({"enable":true,"appId":"6m7dtd8dHwGIO0bNxeAoQCA2-MdYXbMMI","appKey":"y8zdSJiWAx5YSoG7tbTsTsb1","serverURLs":null,"placeholder":"输入你的评论\n昵称为必填项目，输入QQ号可以直接获取用户名和头像","avatar":"mp","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":true,"enableQQ":true,"requiredFields":["nick"]}, {
       el: '#valine-comments',
-      path: "/archives/2021/",
+      path: "/2021/05/14/LeetCode41/",
       serverURLs: "https://6m7dtd8d.api.lncldglobal.com"
     }));
   }, window.Valine);

@@ -23,15 +23,15 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"whispering.xyz","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":{"active":"valine"},"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="LeetCode34 给定升序排列的整数数组nums，和目标值target 找出目标值的在数组中的开始位置和结束位置  思路暴力搜索 解法略  二分法 此处使用二分法的特殊之处在于 不是找到目标值后return mid   而是使得左右指针抵达目标值“区间”边界 返回左右指针">
+<meta name="description" content="LeetCode34 给定升序排列的整数数组nums，和目标值target 找出目标值的在数组中的开始位置和结束位置  思路暴力搜索 解法略  二分法 此处使用二分法的特殊之处在于 不是找到目标值后return mid   而是使得左右指针抵达目标值“区间”边界 返回左右指针    单指针此法需要调两次方法，得到两个指针 双指针">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode34">
 <meta property="og:url" content="http://whispering.xyz/2021/05/14/LeetCode34/index.html">
 <meta property="og:site_name" content="Whispering&#39;s world">
-<meta property="og:description" content="LeetCode34 给定升序排列的整数数组nums，和目标值target 找出目标值的在数组中的开始位置和结束位置  思路暴力搜索 解法略  二分法 此处使用二分法的特殊之处在于 不是找到目标值后return mid   而是使得左右指针抵达目标值“区间”边界 返回左右指针">
+<meta property="og:description" content="LeetCode34 给定升序排列的整数数组nums，和目标值target 找出目标值的在数组中的开始位置和结束位置  思路暴力搜索 解法略  二分法 此处使用二分法的特殊之处在于 不是找到目标值后return mid   而是使得左右指针抵达目标值“区间”边界 返回左右指针    单指针此法需要调两次方法，得到两个指针 双指针">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-13T16:41:41.000Z">
-<meta property="article:modified_time" content="2021-05-13T16:47:10.146Z">
+<meta property="article:modified_time" content="2021-05-14T13:15:47.992Z">
 <meta property="article:author" content="Whispering">
 <meta property="article:tag" content="Arrays">
 <meta name="twitter:card" content="summary">
@@ -222,7 +222,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -386,8 +386,6 @@
 </ol>
 </li>
 </ol>
-<a id="more"></a>
-
 <h4 id="单指针"><a href="#单指针" class="headerlink" title="单指针"></a>单指针</h4><p>此法需要调两次方法，得到两个指针</p>
 <h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4>
       <div>
@@ -422,6 +420,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2021/05/14/LeetCode41/" rel="next" title="LeetCode41">
+                  LeetCode41 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
