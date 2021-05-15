@@ -6,7 +6,7 @@
   <link href="http://whispering.xyz/atom.xml" rel="self"/>
   
   <link href="http://whispering.xyz/"/>
-  <updated>2021-05-14T13:16:40.005Z</updated>
+  <updated>2021-05-15T13:41:53.421Z</updated>
   <id>http://whispering.xyz/</id>
   
   <author>
@@ -17,20 +17,61 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LeetCode42</title>
+    <link href="http://whispering.xyz/2021/05/15/LeetCode42/"/>
+    <id>http://whispering.xyz/2021/05/15/LeetCode42/</id>
+    <published>2021-05-15T13:18:35.000Z</published>
+    <updated>2021-05-15T13:41:53.421Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="LeetCode42"><a href="#LeetCode42" class="headerlink" title="LeetCode42"></a>LeetCode42</h1><p>给定 <em>n</em> 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。</p><ol><li>问题首先在于如何刻画雨水<ol><li>想象成一个水池</li><li>接雨水需要两条边界，取最小的一边来计算雨水量</li></ol></li><li>其次在于如何设定边界条件<ol><li>一次遍历，逐次找到边界极大值，不断更新</li></ol></li></ol><a id="more"></a><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="暴力求解"><a href="#暴力求解" class="headerlink" title="暴力求解"></a>暴力求解</h3><ol><li>一层一层地求雨水量</li><li>然后将数组全部减1，直至零</li><li>然后再求新一层的雨水量</li><li>直至数组元素全部变成0</li><li>代码如下</li></ol><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SolutionFortyTwo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trap</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> all = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line"><span class="comment">//        终止条件：所有元素为零</span></span><br><span class="line">        <span class="keyword">while</span> (allzero(height)) &#123;</span><br><span class="line"><span class="comment">//            计算一层的雨水量，加到总雨水量中</span></span><br><span class="line">            all += onlyOne(height);</span><br><span class="line"><span class="comment">//            数组元素减1</span></span><br><span class="line">            minusOne(height);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> all;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">onlyOne</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line"><span class="comment">//        定义一层的雨水量</span></span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; height.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line"><span class="comment">//            一层的雨水量，则此位置元素为0</span></span><br><span class="line"><span class="comment">//            左边边界&gt;0</span></span><br><span class="line">            <span class="keyword">if</span> (height[i] == <span class="number">0</span> &amp;&amp; height[i - <span class="number">1</span>] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; height.length; j++) &#123;</span><br><span class="line"><span class="comment">//                    可能是连续的0, 一直取到右边边界&gt;0</span></span><br><span class="line">                    <span class="keyword">if</span> (height[j] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                        count = count + (j - i);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">minusOne</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; height.length; i++) &#123;</span><br><span class="line"><span class="comment">//            减1直到0</span></span><br><span class="line">            <span class="keyword">if</span> (height[i] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                height[i] -= <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//    判断元素数组是否全为0</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">allzero</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> nozero = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; height.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (height[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                nozero ++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (nozero == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="6"><li>此法时间复杂度太高，操作繁琐</li></ol><h3 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h3><h4 id="快慢指针"><a href="#快慢指针" class="headerlink" title="快慢指针"></a>快慢指针</h4><ol><li>分别从左，右两个方向开始，找到右边或左边的一次极大值</li><li>再局部遍历</li><li>一次局部遍历结束后，重新赋值指针</li><li>代码如下：</li></ol><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SolutionFortyTwoBetter</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trap</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> leftall = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> rightall = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> right = height.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> left = height.length -<span class="number">2</span>;</span><br><span class="line"><span class="comment">//        从左到右查找</span></span><br><span class="line">        <span class="keyword">while</span> (r &lt; height.length) &#123;</span><br><span class="line">            <span class="keyword">if</span> (height[l] &lt;= height[r]) &#123;</span><br><span class="line"><span class="comment">//                以最小边界值计算雨水量</span></span><br><span class="line">                <span class="keyword">int</span> level = height[l];</span><br><span class="line"><span class="comment">//                计算雨水量只需计算到r-1，</span></span><br><span class="line"><span class="comment">//                若是连续的升序数组元素，则不会进入循环</span></span><br><span class="line"><span class="comment">//                直接更新指针</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = l + <span class="number">1</span>; i &lt; r; i++) &#123;</span><br><span class="line">                    leftall = (level - height[i]) + leftall;</span><br><span class="line">                &#125;</span><br><span class="line"><span class="comment">//                更新指针</span></span><br><span class="line">                l = r;</span><br><span class="line">                r++;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                r++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">//        从右到左查找</span></span><br><span class="line"><span class="comment">//        此时l已取到数组元素的最大值</span></span><br><span class="line"><span class="comment">//        从右边开始只需查找到最大值元素即可，再继续遍历也不会查找到新的雨水量</span></span><br><span class="line">        <span class="keyword">while</span> (left &gt;= l) &#123;</span><br><span class="line"><span class="comment">//            这里判断条件不能写等于</span></span><br><span class="line"><span class="comment">//            在数组元素齐平的情况下会重复计算雨水量</span></span><br><span class="line">            <span class="keyword">if</span> (height[left] &gt; height[right]) &#123;</span><br><span class="line">                <span class="keyword">int</span> level;</span><br><span class="line">                level = height[right];</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = right - <span class="number">1</span>; i &gt; left; i--) &#123;</span><br><span class="line">                    rightall = (level - height[i]) + rightall;</span><br><span class="line">                &#125;</span><br><span class="line">                right = left;</span><br><span class="line">                left--;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                left --;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> leftall + rightall;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;LeetCode42&quot;&gt;&lt;a href=&quot;#LeetCode42&quot; class=&quot;headerlink&quot; title=&quot;LeetCode42&quot;&gt;&lt;/a&gt;LeetCode42&lt;/h1&gt;&lt;p&gt;给定 &lt;em&gt;n&lt;/em&gt; 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;问题首先在于如何刻画雨水&lt;ol&gt;
+&lt;li&gt;想象成一个水池&lt;/li&gt;
+&lt;li&gt;接雨水需要两条边界，取最小的一边来计算雨水量&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;其次在于如何设定边界条件&lt;ol&gt;
+&lt;li&gt;一次遍历，逐次找到边界极大值，不断更新&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="LeetCode" scheme="http://whispering.xyz/categories/LeetCode/"/>
+    
+    
+    <category term="Arrays" scheme="http://whispering.xyz/tags/Arrays/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LeetCode41</title>
     <link href="http://whispering.xyz/2021/05/14/LeetCode41/"/>
     <id>http://whispering.xyz/2021/05/14/LeetCode41/</id>
     <published>2021-05-14T13:16:04.000Z</published>
-    <updated>2021-05-14T13:16:40.005Z</updated>
+    <updated>2021-05-15T13:23:27.614Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="LeetCode41"><a href="#LeetCode41" class="headerlink" title="LeetCode41"></a>LeetCode41</h1><p>给定未排序的整数数组nums，找出其中没有出现过的最小整数</p><ol><li>首先，数组本身没有规律<ol><li>若完全是自然数组</li><li>直接可以找出</li></ol></li><li>关键在于如何调整数组元素，使其表达出一定的规律<ol><li>索引和数值之间存在联系，呈现一一对应</li><li>则根据索引与数值之间不是一一对应关系时</li><li>即可判断此索引位置缺失</li></ol></li></ol><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="调整数组元素"><a href="#调整数组元素" class="headerlink" title="调整数组元素"></a>调整数组元素</h3>]]></content>
+    <content type="html"><![CDATA[<h1 id="LeetCode41"><a href="#LeetCode41" class="headerlink" title="LeetCode41"></a>LeetCode41</h1><p>给定未排序的整数数组nums，找出其中没有出现过的最小整数</p><ol><li>首先，数组本身没有规律<ol><li>若完全是自然数组</li><li>直接可以找出</li></ol></li><li>关键在于如何调整数组元素，使其表达出一定的规律<ol><li>索引和数值之间存在联系，呈现一一对应</li><li>则根据索引与数值之间不是一一对应关系时</li><li>即可判断此索引位置缺失</li></ol></li></ol><a id="more"></a><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="调整数组元素"><a href="#调整数组元素" class="headerlink" title="调整数组元素"></a>调整数组元素</h3>]]></content>
     
     
-      
-      
     <summary type="html">&lt;h1 id=&quot;LeetCode41&quot;&gt;&lt;a href=&quot;#LeetCode41&quot; class=&quot;headerlink&quot; title=&quot;LeetCode41&quot;&gt;&lt;/a&gt;LeetCode41&lt;/h1&gt;&lt;p&gt;给定未排序的整数数组nums，找出其中没有出现过的最小整数&lt;/p&gt;
-&lt;ol&gt;</summary>
-      
+&lt;ol&gt;
+&lt;li&gt;首先，数组本身没有规律&lt;ol&gt;
+&lt;li&gt;若完全是自然数组&lt;/li&gt;
+&lt;li&gt;直接可以找出&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;关键在于如何调整数组元素，使其表达出一定的规律&lt;ol&gt;
+&lt;li&gt;索引和数值之间存在联系，呈现一一对应&lt;/li&gt;
+&lt;li&gt;则根据索引与数值之间不是一一对应关系时&lt;/li&gt;
+&lt;li&gt;即可判断此索引位置缺失&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
     
     
     
@@ -46,17 +87,15 @@
     <link href="http://whispering.xyz/2021/05/14/LeetCode34/"/>
     <id>http://whispering.xyz/2021/05/14/LeetCode34/</id>
     <published>2021-05-13T16:41:41.000Z</published>
-    <updated>2021-05-14T13:15:47.992Z</updated>
+    <updated>2021-05-15T13:23:27.626Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="LeetCode34"><a href="#LeetCode34" class="headerlink" title="LeetCode34"></a>LeetCode34</h1><ol><li>给定升序排列的整数数组nums，和目标值target</li><li>找出目标值的在数组中的开始位置和结束位置</li></ol><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="暴力搜索"><a href="#暴力搜索" class="headerlink" title="暴力搜索"></a>暴力搜索</h3><ol><li>解法略</li></ol><h3 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h3><ol><li>此处使用二分法的特殊之处在于<ol><li>不是找到目标值后return mid</li></ol></li><li>而是使得左右指针抵达目标值“区间”边界<ol><li>返回左右指针</li></ol></li></ol><h4 id="单指针"><a href="#单指针" class="headerlink" title="单指针"></a>单指针</h4><p>此法需要调两次方法，得到两个指针</p><h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4>]]></content>
+    <content type="html"><![CDATA[<h1 id="LeetCode34"><a href="#LeetCode34" class="headerlink" title="LeetCode34"></a>LeetCode34</h1><ol><li>给定升序排列的整数数组nums，和目标值target</li><li>找出目标值的在数组中的开始位置和结束位置</li></ol><a id="more"></a><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="暴力搜索"><a href="#暴力搜索" class="headerlink" title="暴力搜索"></a>暴力搜索</h3><ol><li>解法略</li></ol><h3 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h3><ol><li>此处使用二分法的特殊之处在于<ol><li>不是找到目标值后return mid</li></ol></li><li>而是使得左右指针抵达目标值“区间”边界<ol><li>返回左右指针</li></ol></li></ol><h4 id="单指针"><a href="#单指针" class="headerlink" title="单指针"></a>单指针</h4><p>此法需要调两次方法，得到两个指针</p><h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4>]]></content>
     
     
-      
-      
     <summary type="html">&lt;h1 id=&quot;LeetCode34&quot;&gt;&lt;a href=&quot;#LeetCode34&quot; class=&quot;headerlink&quot; title=&quot;LeetCode34&quot;&gt;&lt;/a&gt;LeetCode34&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;给定升序排列的整数数组nums，和目标值target&lt;/li&gt;
-</summary>
-      
+&lt;li&gt;找出目标值的在数组中的开始位置和结束位置&lt;/li&gt;
+&lt;/ol&gt;</summary>
     
     
     
@@ -72,17 +111,15 @@
     <link href="http://whispering.xyz/2021/05/12/LeetCode4/"/>
     <id>http://whispering.xyz/2021/05/12/LeetCode4/</id>
     <published>2021-05-11T16:38:49.000Z</published>
-    <updated>2021-05-14T13:15:48.014Z</updated>
+    <updated>2021-05-15T13:23:27.543Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="LeetCode4"><a href="#LeetCode4" class="headerlink" title="LeetCode4"></a>LeetCode4</h1><ol><li>给定两个正序数组A、B，容量大小分别为m、n</li><li>找出返回此两个数组的中位数</li></ol><h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><ol><li><p>首先，两个数组已经有序</p><ol><li>那么没有必要再次进行排序，即使是两个独立数组</li><li>只需要找到其中1个元素（奇数），或2个元素（偶数）</li></ol></li><li><p>其次，中位数处于中间位置，左边部分 &lt;= 中位数 &lt;= 右边部分</p><ol><li>则此问题类似于二分查找的变形</li><li>且中位数的位置已知<ol><li>(m+n) / 2 <ol><li>令k = (m+n) / 2 </li></ol></li><li>((m+n) / 2 )+1 </li></ol></li><li>此问题变为查找第k个元素</li></ol></li><li><p>由于在两个独立数组中进行查找</p><ol><li><p>问题在于如何在两个数组中分配 k 查找空间</p></li><li><p>假设均等分配且不越界</p><ol><li>若A[k/2 - 1] &lt; B[k/2 - 1]</li><li>则比A[k/2 - 1]小的数<ol><li>最少有（k/2 - 1 ) 个</li><li>最多有（k-2）个</li></ol></li><li>则A[K/2-1]最多是第k-1个数，而不是第k个数</li><li>则A[k/2-1]之前的数组元素都可以删去</li><li>重新赋值k</li></ol></li><li><p>若m &lt; (m+n) / 2 </p><ol><li>仅需比较最后一个元素</li><li>删去被去除的数组空间，重新赋值k</li></ol></li></ol></li></ol><ol start="4"><li><p>实现代码如下：</p><ol><li><pre><code class="java">public double findMedianSortedArraysHalf(int[] nums1, int[] nums2) &#123;        int length1 = nums1.length, length2 = nums2.length;        int totalLength = length1 + length2;        if (totalLength % 2 == 1) &#123;            int midIndex = totalLength / 2;            return getKthElement(nums1, nums2, midIndex + 1);        &#125; else &#123;            int midIndex1 = totalLength / 2 - 1, midIndex2 = totalLength / 2;            return (getKthElement(nums1, nums2, midIndex1 + 1) + getKthElement(nums1, nums2, midIndex2 + 1)) / 2.0;        &#125;    &#125;    public int getKthElement(int[] nums1, int[] nums2, int k) &#123;        int length1 = nums1.length, length2 = nums2.length;        int index1 = 0, index2 = 0;        while (true) &#123;            // 边界情况            if (index1 == length1) &#123;                return nums2[index2 + k - 1];            &#125;            if (index2 == length2) &#123;                return nums1[index1 + k - 1];            &#125;            if (k == 1) &#123;                return Math.min(nums1[index1], nums2[index2]);            &#125;            int half = k / 2;//            所以在这里进行了最小值判断//            但在这里只是得到了新的索引值，而原数组的索引值缺失//            所以如果元素数量偶数时，要调两次            int newIndex1 = Math.min(index1 + half, length1) - 1;            int newIndex2 = Math.min(index2 + half, length2) - 1;//            如果k/2越界时，即length1远小于length2，此时k/2可能大于length1//            此时第一次循环就要先选取较小长度数组的最后一个元素，若最后一个元素仍小于另一个数组的话，//            则不能直接减去k/2个元素，而是要按照相应的元素数量进行去除//            若最后一个元素较大，则正常进行循环，因为k值只在第一次给出，后续会不断更新            int pivot1 = nums1[newIndex1], pivot2 = nums2[newIndex2];            if (pivot1 &lt;= pivot2) &#123;//                index现在还是0//                减去绝对不是中位数的前k/2个数//                现在只需要找到剩下的更新过的第k个数                k -= (newIndex1 - index1 + 1);//                指针移向下一个元素,看做新的数组再一次进行循环//                当k=1时, 指向两个数组中较小一个                index1 = newIndex1 + 1;            &#125; else &#123;                k -= (newIndex2 - index2 + 1);                index2 = newIndex2 + 1;            &#125;        &#125;//        作者：LeetCode-Solution//        链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-s-114///        来源：力扣（LeetCode）//        著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。    &#125;</code></pre></li></ol></li><li><p>代码分析</p><ol><li>时间复杂度<ol><li><em>O</em>(log(<em>m</em>+<em>n</em>))</li></ol></li><li>空间复杂度<ol><li>O(1)</li></ol></li><li>其他<ol><li>且当m+n是偶数时，需要调两次方法</li></ol></li></ol></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="LeetCode4"><a href="#LeetCode4" class="headerlink" title="LeetCode4"></a>LeetCode4</h1><ol><li>给定两个正序数组A、B，容量大小分别为m、n</li><li>找出返回此两个数组的中位数</li></ol><a id="more"></a><h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><ol><li><p>首先，两个数组已经有序</p><ol><li>那么没有必要再次进行排序，即使是两个独立数组</li><li>只需要找到其中1个元素（奇数），或2个元素（偶数）</li></ol></li><li><p>其次，中位数处于中间位置，左边部分 &lt;= 中位数 &lt;= 右边部分</p><ol><li>则此问题类似于二分查找的变形</li><li>且中位数的位置已知<ol><li>(m+n) / 2 <ol><li>令k = (m+n) / 2 </li></ol></li><li>((m+n) / 2 )+1 </li></ol></li><li>此问题变为查找第k个元素</li></ol></li><li><p>由于在两个独立数组中进行查找</p><ol><li><p>问题在于如何在两个数组中分配 k 查找空间</p></li><li><p>假设均等分配且不越界</p><ol><li>若A[k/2 - 1] &lt; B[k/2 - 1]</li><li>则比A[k/2 - 1]小的数<ol><li>最少有（k/2 - 1 ) 个</li><li>最多有（k-2）个</li></ol></li><li>则A[K/2-1]最多是第k-1个数，而不是第k个数</li><li>则A[k/2-1]之前的数组元素都可以删去</li><li>重新赋值k</li></ol></li><li><p>若m &lt; (m+n) / 2 </p><ol><li>仅需比较最后一个元素</li><li>删去被去除的数组空间，重新赋值k</li></ol></li></ol></li></ol><ol start="4"><li><p>实现代码如下：</p><ol><li><pre><code class="java">public double findMedianSortedArraysHalf(int[] nums1, int[] nums2) &#123;        int length1 = nums1.length, length2 = nums2.length;        int totalLength = length1 + length2;        if (totalLength % 2 == 1) &#123;            int midIndex = totalLength / 2;            return getKthElement(nums1, nums2, midIndex + 1);        &#125; else &#123;            int midIndex1 = totalLength / 2 - 1, midIndex2 = totalLength / 2;            return (getKthElement(nums1, nums2, midIndex1 + 1) + getKthElement(nums1, nums2, midIndex2 + 1)) / 2.0;        &#125;    &#125;    public int getKthElement(int[] nums1, int[] nums2, int k) &#123;        int length1 = nums1.length, length2 = nums2.length;        int index1 = 0, index2 = 0;        while (true) &#123;            // 边界情况            if (index1 == length1) &#123;                return nums2[index2 + k - 1];            &#125;            if (index2 == length2) &#123;                return nums1[index1 + k - 1];            &#125;            if (k == 1) &#123;                return Math.min(nums1[index1], nums2[index2]);            &#125;            int half = k / 2;//            所以在这里进行了最小值判断//            但在这里只是得到了新的索引值，而原数组的索引值缺失//            所以如果元素数量偶数时，要调两次            int newIndex1 = Math.min(index1 + half, length1) - 1;            int newIndex2 = Math.min(index2 + half, length2) - 1;//            如果k/2越界时，即length1远小于length2，此时k/2可能大于length1//            此时第一次循环就要先选取较小长度数组的最后一个元素，若最后一个元素仍小于另一个数组的话，//            则不能直接减去k/2个元素，而是要按照相应的元素数量进行去除//            若最后一个元素较大，则正常进行循环，因为k值只在第一次给出，后续会不断更新            int pivot1 = nums1[newIndex1], pivot2 = nums2[newIndex2];            if (pivot1 &lt;= pivot2) &#123;//                index现在还是0//                减去绝对不是中位数的前k/2个数//                现在只需要找到剩下的更新过的第k个数                k -= (newIndex1 - index1 + 1);//                指针移向下一个元素,看做新的数组再一次进行循环//                当k=1时, 指向两个数组中较小一个                index1 = newIndex1 + 1;            &#125; else &#123;                k -= (newIndex2 - index2 + 1);                index2 = newIndex2 + 1;            &#125;        &#125;//        作者：LeetCode-Solution//        链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/xun-zhao-liang-ge-you-xu-shu-zu-de-zhong-wei-s-114///        来源：力扣（LeetCode）//        著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。    &#125;</code></pre></li></ol></li><li><p>代码分析</p><ol><li>时间复杂度<ol><li><em>O</em>(log(<em>m</em>+<em>n</em>))</li></ol></li><li>空间复杂度<ol><li>O(1)</li></ol></li><li>其他<ol><li>且当m+n是偶数时，需要调两次方法</li></ol></li></ol></li></ol>]]></content>
     
     
-      
-      
     <summary type="html">&lt;h1 id=&quot;LeetCode4&quot;&gt;&lt;a href=&quot;#LeetCode4&quot; class=&quot;headerlink&quot; title=&quot;LeetCode4&quot;&gt;&lt;/a&gt;LeetCode4&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;给定两个正序数组A、B，容量大小分别为m、n&lt;/li&gt;
-&lt;li&gt;找出返回</summary>
-      
+&lt;li&gt;找出返回此两个数组的中位数&lt;/li&gt;
+&lt;/ol&gt;</summary>
     
     
     
@@ -98,16 +135,18 @@
     <link href="http://whispering.xyz/2021/05/11/LeetCode88/"/>
     <id>http://whispering.xyz/2021/05/11/LeetCode88/</id>
     <published>2021-05-10T16:09:16.000Z</published>
-    <updated>2021-05-10T16:10:34.506Z</updated>
+    <updated>2021-05-15T13:23:27.556Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="LeetCode88"><a href="#LeetCode88" class="headerlink" title="LeetCode88"></a>LeetCode88</h1><ol><li><p>合并两个有序数组num1和nums2，将nums2合并到nums1中，使得nums1同样是有序数组</p><ol><li>假设nums1的元素数量为m，nums2的元素数量为n</li></ol></li><li><p>解题思路</p><ol><li><p>创建新的数组，将排序好的数组赋值给num1，新数组的空间大小为(m+n)</p><ol><li><p>已知两个数组有序，则类似于归并排序</p><ol><li><p>关键在于其中一个数组的元素抽取完之后，将另一个没有被抽取完元素的数组的剩余值直接赋值给新数组</p></li><li><p>代码如下：</p></li><li><pre><code class="java">class SolutionEightyEight &#123;    public void merge(int[] nums1, int m, int[] nums2, int n) &#123;        int[] nums3 = new int[m + n];        int indexnums1 = 0;        int indexnums2 = 0;        for (int i = 0; i &lt; m + n; i++) &#123;            if (indexnums1 == m) &#123;                nums3[i] = nums2[indexnums2++];            &#125; else if (indexnums2 == n) &#123;                nums3[i] = nums1[indexnums1++];            &#125; else if (indexnums1 &lt; m || indexnums2 &lt; n) &#123;                if (nums1[indexnums1] &lt; nums2[indexnums2]) &#123;                    nums3[i] = nums1[indexnums1++];                &#125; else if (nums2[indexnums2] &lt;= nums1[indexnums1])&#123;                    nums3[i] = nums2[indexnums2++];                &#125;            &#125;        &#125;        for (int j = 0; j &lt; m + n; j++) &#123;            nums1[j] = nums3[j];        &#125;    &#125;&#125;</code></pre></li></ol></li></ol></li></ol></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="LeetCode88"><a href="#LeetCode88" class="headerlink" title="LeetCode88"></a>LeetCode88</h1><ol><li><p>合并两个有序数组num1和nums2，将nums2合并到nums1中，使得nums1同样是有序数组</p><ol><li>假设nums1的元素数量为m，nums2的元素数量为n</li></ol></li></ol><a id="more"></a><ol start="2"><li><p>解题思路</p><ol><li><p>创建新的数组，将排序好的数组赋值给num1，新数组的空间大小为(m+n)</p><ol><li><p>已知两个数组有序，则类似于归并排序</p><ol><li><p>关键在于其中一个数组的元素抽取完之后，将另一个没有被抽取完元素的数组的剩余值直接赋值给新数组</p></li><li><p>代码如下：</p></li><li><pre><code class="java">class SolutionEightyEight &#123;    public void merge(int[] nums1, int m, int[] nums2, int n) &#123;        int[] nums3 = new int[m + n];        int indexnums1 = 0;        int indexnums2 = 0;        for (int i = 0; i &lt; m + n; i++) &#123;            if (indexnums1 == m) &#123;                nums3[i] = nums2[indexnums2++];            &#125; else if (indexnums2 == n) &#123;                nums3[i] = nums1[indexnums1++];            &#125; else if (indexnums1 &lt; m || indexnums2 &lt; n) &#123;                if (nums1[indexnums1] &lt; nums2[indexnums2]) &#123;                    nums3[i] = nums1[indexnums1++];                &#125; else if (nums2[indexnums2] &lt;= nums1[indexnums1])&#123;                    nums3[i] = nums2[indexnums2++];                &#125;            &#125;        &#125;        for (int j = 0; j &lt; m + n; j++) &#123;            nums1[j] = nums3[j];        &#125;    &#125;&#125;</code></pre></li></ol></li></ol></li></ol></li></ol>]]></content>
     
     
-      
-      
     <summary type="html">&lt;h1 id=&quot;LeetCode88&quot;&gt;&lt;a href=&quot;#LeetCode88&quot; class=&quot;headerlink&quot; title=&quot;LeetCode88&quot;&gt;&lt;/a&gt;LeetCode88&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;合并两个有序数组num1和nums2，将nums2合并到n</summary>
-      
+&lt;li&gt;&lt;p&gt;合并两个有序数组num1和nums2，将nums2合并到nums1中，使得nums1同样是有序数组&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;假设nums1的元素数量为m，nums2的元素数量为n&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
     
     
     
@@ -123,20 +162,19 @@
     <link href="http://whispering.xyz/2021/04/17/%E6%B1%82100%E4%BB%A5%E5%86%85%E6%89%80%E6%9C%89%E8%B4%A8%E6%95%B0/"/>
     <id>http://whispering.xyz/2021/04/17/%E6%B1%82100%E4%BB%A5%E5%86%85%E6%89%80%E6%9C%89%E8%B4%A8%E6%95%B0/</id>
     <published>2021-04-16T16:33:15.000Z</published>
-    <updated>2021-05-10T16:17:56.094Z</updated>
+    <updated>2021-05-15T13:23:27.476Z</updated>
     
-    <content type="html"><![CDATA[<p>所有代码用Jave做示例</p><ol><li><p>所谓质数，即是除1和其本身外不能被其他数整除</p><ol><li><p>首先需要循环遍历所有数字，逐个做判断，根据其定义自然有</p><ol><li><pre><code class="java">class PrimeNumber &#123;    public static void main(String[] args)&#123;        // FLag        boolean isFlag = true;        for(int i = 2;i &lt; 100;i++)&#123;            for(int j = 2;j &lt; 2;j++)&#123;                if(i % j == 0)&#123;                    isFlag = false;                &#125;            &#125;            if(isFlag == true)&#123;                System.Out.println(i);            &#125;        //重置Flag            isFlag = true    &#125;&#125;</code></pre></li></ol></li><li><p>时间复杂度分析</p><ol><li></li></ol></li></ol></li></ol>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>所谓质数，即是除1和其本身外不能被其他数整除</p><ol><li><p>首先需要循环遍历所有数字，逐个做判断，根据其定义自然有</p><ol><li><pre><code class="java">class PrimeNumber &#123;    public static void main(String[] args)&#123;        // FLag        boolean isFlag = true;        for(int i = 2;i &lt; 100;i++)&#123;            for(int j = 2;j &lt; 2;j++)&#123;                if(i % j == 0)&#123;                    isFlag = false;                &#125;            &#125;            if(isFlag == true)&#123;                System.Out.println(i);            &#125;        //重置Flag            isFlag = true    &#125;&#125;</code></pre></li></ol></li><li><p>时间复杂度分析</p><ol><li></li></ol></li></ol></li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;所有代码用Jave做示例&lt;/p&gt;
-&lt;ol&gt;
+    <summary type="html">&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;所谓质数，即是除1和其本身外不能被其他数整除&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;首先需要循环遍历所有数字，逐个做判断，根据其定义自然有&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;clas</summary>
+&lt;li&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;class PrimeNumber &amp;#123;</summary>
       
     
     
@@ -153,15 +191,25 @@
     <link href="http://whispering.xyz/2021/04/16/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://whispering.xyz/2021/04/16/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
     <published>2021-04-16T15:55:50.000Z</published>
-    <updated>2021-05-13T16:50:32.846Z</updated>
+    <updated>2021-05-15T13:23:27.642Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li>npm install hexo -g<ol><li>安装</li></ol></li><li>npm update hexo -g<ol><li>升级</li></ol></li><li>hexo init<ol><li>初始化</li></ol></li></ol><h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ol><li>hexo new page  &lt;title&gt; ; hexo n</li><li>hexo new post &lt;title&gt;<ol><li>page 与 post 的区别<ol><li>post指文章、日志，会按时间顺序排列在博客上</li><li>page指页面，不受时间规则影响，内容很少改变</li></ol></li></ol></li></ol><h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><ol><li>hexo generate ; hexo g<ol><li>生成静态页面至public目录</li></ol></li><li>hexo server<ol><li>开启预览访问端口</li></ol></li><li>hexo deploy ; hexo d<ol><li>部署到服务器</li></ol></li><li>hexo d -g<ol><li>合并使用</li></ol></li></ol><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol><li><p>hexo clean</p><ol><li>清除缓存</li></ol></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li>npm install hexo -g<ol><li>安装</li></ol></li><li>npm update hexo -g<ol><li>升级</li></ol></li><li>hexo init<ol><li>初始化</li></ol></li></ol><a id="more"></a><h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ol><li>hexo new page  &lt;title&gt; ; hexo n</li><li>hexo new post &lt;title&gt;<ol><li>page 与 post 的区别<ol><li>post指文章、日志，会按时间顺序排列在博客上</li><li>page指页面，不受时间规则影响，内容很少改变</li></ol></li></ol></li></ol><h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><ol><li>hexo generate ; hexo g<ol><li>生成静态页面至public目录</li></ol></li><li>hexo server<ol><li>开启预览访问端口</li></ol></li><li>hexo deploy ; hexo d<ol><li>部署到服务器</li></ol></li><li>hexo d -g<ol><li>合并使用</li></ol></li></ol><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol><li><p>hexo clean</p><ol><li>清除缓存</li></ol></li></ol>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Hexo-常用命令&quot;&gt;&lt;a href=&quot;#Hexo-常用命令&quot; class=&quot;headerlink&quot; title=&quot;Hexo 常用命令&quot;&gt;&lt;/a&gt;Hexo 常用命令&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; </summary>
-      
+    <summary type="html">&lt;h1 id=&quot;Hexo-常用命令&quot;&gt;&lt;a href=&quot;#Hexo-常用命令&quot; class=&quot;headerlink&quot; title=&quot;Hexo 常用命令&quot;&gt;&lt;/a&gt;Hexo 常用命令&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;npm install hexo -g&lt;ol&gt;
+&lt;li&gt;安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;npm update hexo -g&lt;ol&gt;
+&lt;li&gt;升级&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;hexo init&lt;ol&gt;
+&lt;li&gt;初始化&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
     
     
     

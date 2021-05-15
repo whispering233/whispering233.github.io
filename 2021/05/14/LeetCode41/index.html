@@ -23,15 +23,15 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"whispering.xyz","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":{"active":"valine"},"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="LeetCode41给定未排序的整数数组nums，找出其中没有出现过的最小整数  首先，数组本身没有规律 若完全是自然数组 直接可以找出   关键在于如何调整数组元素，使其表达出一定的规律 索引和数值之间存在联系，呈现一一对应 则根据索引与数值之间不是一一对应关系时 即可判断此索引位置缺失    解题思路调整数组元素">
+<meta name="description" content="LeetCode41给定未排序的整数数组nums，找出其中没有出现过的最小整数  首先，数组本身没有规律 若完全是自然数组 直接可以找出   关键在于如何调整数组元素，使其表达出一定的规律 索引和数值之间存在联系，呈现一一对应 则根据索引与数值之间不是一一对应关系时 即可判断此索引位置缺失">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode41">
 <meta property="og:url" content="http://whispering.xyz/2021/05/14/LeetCode41/index.html">
 <meta property="og:site_name" content="Whispering&#39;s world">
-<meta property="og:description" content="LeetCode41给定未排序的整数数组nums，找出其中没有出现过的最小整数  首先，数组本身没有规律 若完全是自然数组 直接可以找出   关键在于如何调整数组元素，使其表达出一定的规律 索引和数值之间存在联系，呈现一一对应 则根据索引与数值之间不是一一对应关系时 即可判断此索引位置缺失    解题思路调整数组元素">
+<meta property="og:description" content="LeetCode41给定未排序的整数数组nums，找出其中没有出现过的最小整数  首先，数组本身没有规律 若完全是自然数组 直接可以找出   关键在于如何调整数组元素，使其表达出一定的规律 索引和数值之间存在联系，呈现一一对应 则根据索引与数值之间不是一一对应关系时 即可判断此索引位置缺失">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-14T13:16:04.000Z">
-<meta property="article:modified_time" content="2021-05-14T13:16:40.005Z">
+<meta property="article:modified_time" content="2021-05-15T13:23:27.614Z">
 <meta property="article:author" content="Whispering">
 <meta property="article:tag" content="Arrays">
 <meta name="twitter:card" content="summary">
@@ -222,7 +222,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -383,6 +383,8 @@
 </ol>
 </li>
 </ol>
+<a id="more"></a>
+
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="调整数组元素"><a href="#调整数组元素" class="headerlink" title="调整数组元素"></a>调整数组元素</h3>
       <div>
           
@@ -416,6 +418,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2021/05/15/LeetCode42/" rel="next" title="LeetCode42">
+                  LeetCode42 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -470,13 +475,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">19k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">16 分钟</span>
+    <span title="站点阅读时长">18 分钟</span>
   </span>
 </div>
 

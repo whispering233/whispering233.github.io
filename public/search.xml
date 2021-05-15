@@ -17,6 +17,7 @@
 </ol>
 </li>
 </ol>
+<a id="more"></a>
 <h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ol>
 <li>hexo new page  &lt;title&gt; ; hexo n</li>
 <li>hexo new post &lt;title&gt;<ol>
@@ -70,6 +71,10 @@
 <li>假设nums1的元素数量为m，nums2的元素数量为n</li>
 </ol>
 </li>
+</ol>
+<a id="more"></a>
+
+<ol start="2">
 <li><p>解题思路</p>
 <ol>
 <li><p>创建新的数组，将排序好的数组赋值给num1，新数组的空间大小为(m+n)</p>
@@ -122,8 +127,7 @@
   <entry>
     <title>求100以内所有质数</title>
     <url>/2021/04/17/%E6%B1%82100%E4%BB%A5%E5%86%85%E6%89%80%E6%9C%89%E8%B4%A8%E6%95%B0/</url>
-    <content><![CDATA[<p>所有代码用Jave做示例</p>
-<ol>
+    <content><![CDATA[<ol>
 <li><p>所谓质数，即是除1和其本身外不能被其他数整除</p>
 <ol>
 <li><p>首先需要循环遍历所有数字，逐个做判断，根据其定义自然有</p>
@@ -546,6 +550,8 @@
 <li>给定两个正序数组A、B，容量大小分别为m、n</li>
 <li>找出返回此两个数组的中位数</li>
 </ol>
+<a id="more"></a>
+
 <h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><ol>
 <li><p>首先，两个数组已经有序</p>
 <ol>
@@ -688,6 +694,8 @@
 <li>给定升序排列的整数数组nums，和目标值target</li>
 <li>找出目标值的在数组中的开始位置和结束位置</li>
 </ol>
+<a id="more"></a>
+
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="暴力搜索"><a href="#暴力搜索" class="headerlink" title="暴力搜索"></a>暴力搜索</h3><ol>
 <li>解法略</li>
 </ol>
@@ -727,7 +735,66 @@
 </ol>
 </li>
 </ol>
+<a id="more"></a>
+
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="调整数组元素"><a href="#调整数组元素" class="headerlink" title="调整数组元素"></a>调整数组元素</h3>]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>Arrays</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LeetCode42</title>
+    <url>/2021/05/15/LeetCode42/</url>
+    <content><![CDATA[<h1 id="LeetCode42"><a href="#LeetCode42" class="headerlink" title="LeetCode42"></a>LeetCode42</h1><p>给定 <em>n</em> 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。</p>
+<ol>
+<li>问题首先在于如何刻画雨水<ol>
+<li>想象成一个水池</li>
+<li>接雨水需要两条边界，取最小的一边来计算雨水量</li>
+</ol>
+</li>
+<li>其次在于如何设定边界条件<ol>
+<li>一次遍历，逐次找到边界极大值，不断更新</li>
+</ol>
+</li>
+</ol>
+<a id="more"></a>
+
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="暴力求解"><a href="#暴力求解" class="headerlink" title="暴力求解"></a>暴力求解</h3><ol>
+<li>一层一层地求雨水量</li>
+<li>然后将数组全部减1，直至零</li>
+<li>然后再求新一层的雨水量</li>
+<li>直至数组元素全部变成0</li>
+<li>代码如下</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SolutionFortyTwo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trap</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> all = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line"><span class="comment">//        终止条件：所有元素为零</span></span><br><span class="line">        <span class="keyword">while</span> (allzero(height)) &#123;</span><br><span class="line"><span class="comment">//            计算一层的雨水量，加到总雨水量中</span></span><br><span class="line">            all += onlyOne(height);</span><br><span class="line"><span class="comment">//            数组元素减1</span></span><br><span class="line">            minusOne(height);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> all;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">onlyOne</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line"><span class="comment">//        定义一层的雨水量</span></span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; height.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line"><span class="comment">//            一层的雨水量，则此位置元素为0</span></span><br><span class="line"><span class="comment">//            左边边界&gt;0</span></span><br><span class="line">            <span class="keyword">if</span> (height[i] == <span class="number">0</span> &amp;&amp; height[i - <span class="number">1</span>] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; height.length; j++) &#123;</span><br><span class="line"><span class="comment">//                    可能是连续的0, 一直取到右边边界&gt;0</span></span><br><span class="line">                    <span class="keyword">if</span> (height[j] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                        count = count + (j - i);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">minusOne</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; height.length; i++) &#123;</span><br><span class="line"><span class="comment">//            减1直到0</span></span><br><span class="line">            <span class="keyword">if</span> (height[i] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                height[i] -= <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//    判断元素数组是否全为0</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">allzero</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> nozero = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; height.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (height[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                nozero ++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (nozero == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="6">
+<li>此法时间复杂度太高，操作繁琐</li>
+</ol>
+<h3 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h3><h4 id="快慢指针"><a href="#快慢指针" class="headerlink" title="快慢指针"></a>快慢指针</h4><ol>
+<li>分别从左，右两个方向开始，找到右边或左边的一次极大值</li>
+<li>再局部遍历</li>
+<li>一次局部遍历结束后，重新赋值指针</li>
+<li>代码如下：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SolutionFortyTwoBetter</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trap</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> leftall = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> rightall = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> right = height.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> left = height.length -<span class="number">2</span>;</span><br><span class="line"><span class="comment">//        从左到右查找</span></span><br><span class="line">        <span class="keyword">while</span> (r &lt; height.length) &#123;</span><br><span class="line">            <span class="keyword">if</span> (height[l] &lt;= height[r]) &#123;</span><br><span class="line"><span class="comment">//                以最小边界值计算雨水量</span></span><br><span class="line">                <span class="keyword">int</span> level = height[l];</span><br><span class="line"><span class="comment">//                计算雨水量只需计算到r-1，</span></span><br><span class="line"><span class="comment">//                若是连续的升序数组元素，则不会进入循环</span></span><br><span class="line"><span class="comment">//                直接更新指针</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = l + <span class="number">1</span>; i &lt; r; i++) &#123;</span><br><span class="line">                    leftall = (level - height[i]) + leftall;</span><br><span class="line">                &#125;</span><br><span class="line"><span class="comment">//                更新指针</span></span><br><span class="line">                l = r;</span><br><span class="line">                r++;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                r++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">//        从右到左查找</span></span><br><span class="line"><span class="comment">//        此时l已取到数组元素的最大值</span></span><br><span class="line"><span class="comment">//        从右边开始只需查找到最大值元素即可，再继续遍历也不会查找到新的雨水量</span></span><br><span class="line">        <span class="keyword">while</span> (left &gt;= l) &#123;</span><br><span class="line"><span class="comment">//            这里判断条件不能写等于</span></span><br><span class="line"><span class="comment">//            在数组元素齐平的情况下会重复计算雨水量</span></span><br><span class="line">            <span class="keyword">if</span> (height[left] &gt; height[right]) &#123;</span><br><span class="line">                <span class="keyword">int</span> level;</span><br><span class="line">                level = height[right];</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = right - <span class="number">1</span>; i &gt; left; i--) &#123;</span><br><span class="line">                    rightall = (level - height[i]) + rightall;</span><br><span class="line">                &#125;</span><br><span class="line">                right = left;</span><br><span class="line">                left--;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                left --;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> leftall + rightall;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+]]></content>
       <categories>
         <category>LeetCode</category>
       </categories>
