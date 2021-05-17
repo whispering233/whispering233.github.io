@@ -23,21 +23,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"whispering.xyz","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":{"active":"valine"},"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="LeetCode34 给定升序排列的整数数组nums，和目标值target 找出目标值的在数组中的开始位置和结束位置">
+<meta name="description" content="LeetCode169给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数 大于⌊ n&#x2F;2 ⌋的元素。  你可以假设数组是非空的，并且给定的数组总是存在多数元素。  题目分析 此题实际上在求众数 个数 &gt; n &#x2F; 2 排序 返回指针相同的一段 &gt; n&#x2F;2 由于数组此时已排序 众数的数组空间至少有一个元素处于 i &#x3D; nums.length &#x2F; 2 上 此时直接返">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode34">
-<meta property="og:url" content="http://whispering.xyz/2021/05/14/LeetCode34/index.html">
+<meta property="og:title" content="LeetCode169">
+<meta property="og:url" content="http://whispering.xyz/2021/05/17/LeetCode169/index.html">
 <meta property="og:site_name" content="Whispering&#39;s world">
-<meta property="og:description" content="LeetCode34 给定升序排列的整数数组nums，和目标值target 找出目标值的在数组中的开始位置和结束位置">
+<meta property="og:description" content="LeetCode169给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数 大于⌊ n&#x2F;2 ⌋的元素。  你可以假设数组是非空的，并且给定的数组总是存在多数元素。  题目分析 此题实际上在求众数 个数 &gt; n &#x2F; 2 排序 返回指针相同的一段 &gt; n&#x2F;2 由于数组此时已排序 众数的数组空间至少有一个元素处于 i &#x3D; nums.length &#x2F; 2 上 此时直接返">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-05-13T16:41:41.000Z">
-<meta property="article:modified_time" content="2021-05-15T13:23:27.626Z">
+<meta property="article:published_time" content="2021-05-17T15:45:00.000Z">
+<meta property="article:modified_time" content="2021-05-17T15:46:13.654Z">
 <meta property="article:author" content="Whispering">
 <meta property="article:tag" content="Arrays">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://whispering.xyz/2021/05/14/LeetCode34/">
+<link rel="canonical" href="http://whispering.xyz/2021/05/17/LeetCode169/">
 
 
 <script class="page-configurations">
@@ -49,7 +49,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>LeetCode34 | Whispering's world</title>
+<title>LeetCode169 | Whispering's world</title>
   
 
 
@@ -207,7 +207,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#LeetCode34"><span class="nav-number">1.</span> <span class="nav-text">LeetCode34</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.1.</span> <span class="nav-text">思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9A%B4%E5%8A%9B%E6%90%9C%E7%B4%A2"><span class="nav-number">1.1.1.</span> <span class="nav-text">暴力搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E6%B3%95"><span class="nav-number">1.1.2.</span> <span class="nav-text">二分法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E6%8C%87%E9%92%88"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">单指针</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">双指针</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#LeetCode169"><span class="nav-number">1.</span> <span class="nav-text">LeetCode169</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">题目分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.2.</span> <span class="nav-text">思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-number">1.2.1.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%95%E7%A5%A8%E7%AE%97%E6%B3%95"><span class="nav-number">1.2.2.</span> <span class="nav-text">投票算法</span></a></li></ol></li></ol></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -286,7 +286,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://whispering.xyz/2021/05/14/LeetCode34/">
+    <link itemprop="mainEntityOfPage" href="http://whispering.xyz/2021/05/17/LeetCode169/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/sword.gif">
@@ -299,7 +299,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          LeetCode34
+          LeetCode169
         </h1>
 
         <div class="post-meta-container">
@@ -310,7 +310,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-05-14 00:41:41" itemprop="dateCreated datePublished" datetime="2021-05-14T00:41:41+08:00">2021-05-14</time>
+      <time title="创建时间：2021-05-17 23:45:00" itemprop="dateCreated datePublished" datetime="2021-05-17T23:45:00+08:00">2021-05-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -323,7 +323,7 @@
     </span>
 
   
-    <span id="/2021/05/14/LeetCode34/" class="post-meta-item leancloud_visitors" data-flag-title="LeetCode34" title="阅读次数">
+    <span id="/2021/05/17/LeetCode169/" class="post-meta-item leancloud_visitors" data-flag-title="LeetCode169" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -338,8 +338,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/05/14/LeetCode34/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/14/LeetCode34/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/05/17/LeetCode169/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/17/LeetCode169/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -351,7 +351,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>146</span>
+      <span>755</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -369,27 +369,50 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="LeetCode34"><a href="#LeetCode34" class="headerlink" title="LeetCode34"></a>LeetCode34</h1><ol>
-<li>给定升序排列的整数数组nums，和目标值target</li>
-<li>找出目标值的在数组中的开始位置和结束位置</li>
+        <h1 id="LeetCode169"><a href="#LeetCode169" class="headerlink" title="LeetCode169"></a>LeetCode169</h1><p>给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数 大于⌊ n/2 ⌋的元素。</p>
+<ul>
+<li>你可以假设数组是非空的，并且给定的数组总是存在多数元素。</li>
+</ul>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><ol>
+<li>此题实际上在求众数</li>
+<li>个数 &gt; n / 2<ol>
+<li>排序<ol>
+<li>返回指针相同的一段 &gt; n/2</li>
+<li>由于数组此时已排序<ol>
+<li>众数的数组空间至少有一个元素处于 i = nums.length / 2 上</li>
+<li>此时直接返回数组中间位置上的元素即可</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>哈希表</li>
+</ol>
+</li>
+<li>概率 &gt; 1/2<ol>
+<li>随机化</li>
+</ol>
+</li>
+<li>众数比其他元素出现的次数多<ol>
+<li>投票算法</li>
+</ol>
+</li>
+<li>分治法<ol>
+<li>一段一段地求局部众数</li>
+</ol>
+</li>
 </ol>
 <a id="more"></a>
 
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="暴力搜索"><a href="#暴力搜索" class="headerlink" title="暴力搜索"></a>暴力搜索</h3><ol>
-<li>解法略</li>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    Arrays.sort(nums);</span><br><span class="line">    <span class="keyword">return</span> nums[nums.length / <span class="number">2</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="投票算法"><a href="#投票算法" class="headerlink" title="投票算法"></a>投票算法</h3><ol>
+<li>令众数为1，其他数为0，总数组的值 &gt; 0</li>
 </ol>
-<h3 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h3><ol>
-<li>此处使用二分法的特殊之处在于<ol>
-<li>不是找到目标值后return mid</li>
-</ol>
-</li>
-<li>而是使得左右指针抵达目标值“区间”边界<ol>
-<li>返回左右指针</li>
-</ol>
-</li>
-</ol>
-<h4 id="单指针"><a href="#单指针" class="headerlink" title="单指针"></a>单指针</h4><p>此法需要调两次方法，得到两个指针</p>
-<h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElementBetter</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        Integer candidate = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">            <span class="keyword">if</span> (count == <span class="number">0</span>) &#123;</span><br><span class="line">                candidate = num;</span><br><span class="line">            &#125;</span><br><span class="line">            count += (num == candidate) ? <span class="number">1</span> : -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> candidate;</span><br><span class="line"></span><br><span class="line"><span class="comment">//        作者：LeetCode-Solution</span></span><br><span class="line"><span class="comment">//        链接：https://leetcode-cn.com/problems/majority-element/solution/duo-shu-yuan-su-by-leetcode-solution/</span></span><br><span class="line"><span class="comment">//        来源：力扣（LeetCode）</span></span><br><span class="line"><span class="comment">//        著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
       <div>
           
               <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
@@ -417,14 +440,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/05/12/LeetCode4/" rel="prev" title="LeetCode4">
-                  <i class="fa fa-chevron-left"></i> LeetCode4
+                <a href="/2021/05/15/LeetCode42/" rel="prev" title="LeetCode42">
+                  <i class="fa fa-chevron-left"></i> LeetCode42
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/05/14/LeetCode41/" rel="next" title="LeetCode41">
-                  LeetCode41 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -553,7 +573,7 @@ NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
     new Valine(Object.assign({"enable":true,"appId":"6m7dtd8dHwGIO0bNxeAoQCA2-MdYXbMMI","appKey":"y8zdSJiWAx5YSoG7tbTsTsb1","serverURLs":null,"placeholder":"输入你的评论\n昵称为必填项目，输入QQ号可以直接获取用户名和头像","avatar":"mp","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":true,"enableQQ":true,"requiredFields":["nick"]}, {
       el: '#valine-comments',
-      path: "/2021/05/14/LeetCode34/",
+      path: "/2021/05/17/LeetCode169/",
       serverURLs: "https://6m7dtd8d.api.lncldglobal.com"
     }));
   }, window.Valine);

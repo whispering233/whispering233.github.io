@@ -6,7 +6,7 @@
   <link href="http://whispering.xyz/atom.xml" rel="self"/>
   
   <link href="http://whispering.xyz/"/>
-  <updated>2021-05-15T13:41:53.421Z</updated>
+  <updated>2021-05-17T15:46:13.654Z</updated>
   <id>http://whispering.xyz/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode169</title>
+    <link href="http://whispering.xyz/2021/05/17/LeetCode169/"/>
+    <id>http://whispering.xyz/2021/05/17/LeetCode169/</id>
+    <published>2021-05-17T15:45:00.000Z</published>
+    <updated>2021-05-17T15:46:13.654Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="LeetCode169"><a href="#LeetCode169" class="headerlink" title="LeetCode169"></a>LeetCode169</h1><p>给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数 大于⌊ n/2 ⌋的元素。</p><ul><li>你可以假设数组是非空的，并且给定的数组总是存在多数元素。</li></ul><h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><ol><li>此题实际上在求众数</li><li>个数 &gt; n / 2<ol><li>排序<ol><li>返回指针相同的一段 &gt; n/2</li><li>由于数组此时已排序<ol><li>众数的数组空间至少有一个元素处于 i = nums.length / 2 上</li><li>此时直接返回数组中间位置上的元素即可</li></ol></li></ol></li><li>哈希表</li></ol></li><li>概率 &gt; 1/2<ol><li>随机化</li></ol></li><li>众数比其他元素出现的次数多<ol><li>投票算法</li></ol></li><li>分治法<ol><li>一段一段地求局部众数</li></ol></li></ol><a id="more"></a><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    Arrays.sort(nums);</span><br><span class="line">    <span class="keyword">return</span> nums[nums.length / <span class="number">2</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="投票算法"><a href="#投票算法" class="headerlink" title="投票算法"></a>投票算法</h3><ol><li>令众数为1，其他数为0，总数组的值 &gt; 0</li></ol><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElementBetter</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        Integer candidate = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">            <span class="keyword">if</span> (count == <span class="number">0</span>) &#123;</span><br><span class="line">                candidate = num;</span><br><span class="line">            &#125;</span><br><span class="line">            count += (num == candidate) ? <span class="number">1</span> : -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> candidate;</span><br><span class="line"></span><br><span class="line"><span class="comment">//        作者：LeetCode-Solution</span></span><br><span class="line"><span class="comment">//        链接：https://leetcode-cn.com/problems/majority-element/solution/duo-shu-yuan-su-by-leetcode-solution/</span></span><br><span class="line"><span class="comment">//        来源：力扣（LeetCode）</span></span><br><span class="line"><span class="comment">//        著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;LeetCode169&quot;&gt;&lt;a href=&quot;#LeetCode169&quot; class=&quot;headerlink&quot; title=&quot;LeetCode169&quot;&gt;&lt;/a&gt;LeetCode169&lt;/h1&gt;&lt;p&gt;给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数 大于⌊ n/2 ⌋的元素。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你可以假设数组是非空的，并且给定的数组总是存在多数元素。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;题目分析&quot;&gt;&lt;a href=&quot;#题目分析&quot; class=&quot;headerlink&quot; title=&quot;题目分析&quot;&gt;&lt;/a&gt;题目分析&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;此题实际上在求众数&lt;/li&gt;
+&lt;li&gt;个数 &amp;gt; n / 2&lt;ol&gt;
+&lt;li&gt;排序&lt;ol&gt;
+&lt;li&gt;返回指针相同的一段 &amp;gt; n/2&lt;/li&gt;
+&lt;li&gt;由于数组此时已排序&lt;ol&gt;
+&lt;li&gt;众数的数组空间至少有一个元素处于 i = nums.length / 2 上&lt;/li&gt;
+&lt;li&gt;此时直接返回数组中间位置上的元素即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;哈希表&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;概率 &amp;gt; 1/2&lt;ol&gt;
+&lt;li&gt;随机化&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;众数比其他元素出现的次数多&lt;ol&gt;
+&lt;li&gt;投票算法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;分治法&lt;ol&gt;
+&lt;li&gt;一段一段地求局部众数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="LeetCode" scheme="http://whispering.xyz/categories/LeetCode/"/>
+    
+    
+    <category term="Arrays" scheme="http://whispering.xyz/tags/Arrays/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode42</title>
